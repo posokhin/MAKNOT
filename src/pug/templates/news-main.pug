@@ -1,0 +1,18 @@
+section.news-main
+    .container
+        .news-main__top.flex.jcsb
+            h2 Новости и акции
+            a(href="").news-main__more.btn.btn--icon.btn--more
+                span Все новости
+                i.i-more
+        ul.news-main__list.flex-wrap
+            -for(var i = 1; i < 5; i++)
+                li.news-main__item
+                    a(href="").news-main__link
+                        .news-main__img
+                            img(src="img/news-main/"+i+".webp", alt="")
+                        .news-main__date 26.08.2019
+                        .news-main__text Компания Maknot™ приглашает посетитить выставочный стенд на международной автозапчастей
+        a(href="").news-main__more.news-main__more--bottom.btn.btn--icon.btn--more
+            span Все новости
+            i.i-more

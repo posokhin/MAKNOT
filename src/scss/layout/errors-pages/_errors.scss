@@ -1,0 +1,38 @@
+.error{
+    padding: 250px 0;
+    @include media(1023){
+        padding: 100px 0;
+    }
+    @include media(767){
+        padding: 32px 0;
+    }
+    &__row{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    &__col{
+        width: 40%;
+        padding: 0 20px;
+        &--text{
+            width: 60%;
+            @include media(767){
+                margin-top: 24px;
+            }
+            a{
+                margin-top: 8px;
+            }
+        }
+        @include media(767){
+            img{
+                width: 100px;
+            }
+            h3{
+                font-size: 20px;
+            }
+            p{
+                max-width: 300px;
+            }
+            width: 100%;
+        }
+    }
+}

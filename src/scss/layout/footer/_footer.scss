@@ -1,0 +1,126 @@
+.footer{
+    padding: 45px 0;
+    background-color: #25292e;
+    font-size: 14px;
+    @include media(767){
+        padding: 24px 0;
+    }
+    &__row{
+        margin: 0 -20px;
+        @include media(767){
+            margin: 0;
+        }
+    }
+    &__col{ 
+        @include col(2);
+        padding: 0 20px;
+        @include media(1200){
+            @include col(2.4);
+        }
+        @include media(1023){
+            @include col(3);
+            margin-bottom: 24px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        @include media(767){
+            width: 100%;
+            padding: 0;
+        }
+        &-title{
+            color: #adb5bd;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.58px;      
+            padding-bottom: 16px;
+            margin-bottom: 8px;
+            position: relative;
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: 16px;
+                height: 2px;
+                background-color: #00acff;
+            }
+        }
+        p,a{
+            display: block;
+            letter-spacing: 0.58px;
+            line-height: 24.89px;      
+            color: #ffffff;
+        }
+        a{
+            &:hover{
+                color: #ff5a00;
+                text-decoration: underline;       
+            }
+        }
+        &--logo{
+            @include media(1023){
+                width: 100%;
+                margin-bottom: 24px;
+            }
+            @include media(767){
+                img{
+                    width: 110px;  
+                }
+            }
+        }
+        &--info{
+            @include media(1200){
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 32px;
+                p{
+                    margin: 0;
+                }
+                span{
+                    order: -1;
+                }
+            }
+            @include media(1023){
+                width: 100%;
+            }
+            @include media(767){
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 0;
+                p{
+                    margin: 24px 0;
+                }
+                span{
+                    order: 1;
+                }
+            }
+            p,a{
+                color: #adb5bd;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 20px;
+            }
+            a{
+                text-decoration: underline;
+            }
+            p{
+                margin: 5px 0 13px;
+            }
+            span{
+                color: #868e96;       
+            }
+        }
+    }
+    &__social{
+        margin-top: 16px;
+        li{
+            margin-right: 12px;
+            &:last-child{
+                margin-right: 0;
+            } 
+        }
+    }
+}

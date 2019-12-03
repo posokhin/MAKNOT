@@ -1,0 +1,117 @@
+@import './_icomoon';
+i{
+    display: inline-flex;
+    transition: .3s;
+}
+.i{
+    transition: .3s;
+    &-arrow{
+        &--down{
+            &-small{
+                width: 8px;
+                height: 2px;
+                position: relative;
+                &::before,&::after{
+                    display: block;
+                    content: "";
+                    display: block;
+                    width: 5px;
+                    height: 2px;
+                    background: #212529;
+                    position: absolute;
+                }
+                &::before{
+                    transform: rotate(35deg);
+                    left: 0;
+                }
+                &::after{
+                    transform: rotate(-35deg);
+                    right: 0;
+                }
+            }
+        }
+        &--blue{
+            &-small{
+                background: url("img/icons/i-arrow--blue-small.svg") no-repeat center/contain;
+                width: 10px;
+                height: 7px;      
+            }
+        }
+    }
+    &-close{
+        width: 18px;
+        height: 18px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        &::before,&::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #212529;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &::before{
+            transform: rotate(45deg);
+        }
+        &::after{
+            transform: rotate(-45deg);
+        }
+    }
+    &-search{
+        &--custom{
+            width: 18px;
+            height: 18px;
+            border: 2px solid #212529;
+            border-radius: 50%;      
+        }
+    }
+    &-telegram{
+        background: url("img/icons/i-telegram.svg") no-repeat center/contain;
+        width: 32px;
+        height: 32px;
+    }
+    &-whatsupp{
+        background: url("img/icons/i-whatsupp.svg") no-repeat center/contain;
+        width: 32px;
+        height: 32px;
+    }
+    &-viber{
+        background: url("img/icons/i-viber.svg") no-repeat center/contain;
+        width: 32px;
+        height: 32px;
+    }
+    &-home{
+        background: url("img/icons/i-home.svg") no-repeat center/contain;
+        width: 24px;
+        height: 24px;
+    }
+    &-acc{
+        background: url("img/icons/i-acc.svg") no-repeat center/contain;
+        width: 32px;
+        height: 32px;
+    }
+    &-oil{
+        background: url("img/icons/i-oil.svg") no-repeat center/contain;
+        width: 32px;
+        height: 32px;
+    }
+    &-filter-water{
+        background: url("img/icons/i-filter.svg") no-repeat center/contain;
+        width: 32px;
+        height: 32px;
+    }
+    &-download{
+        background: url("img/icons/i-download.svg") no-repeat center/contain;
+        width: 24px;
+        height: 24px;
+    }
+    &-more{
+        background: url("img/icons/i-more.svg") no-repeat center/contain;
+        width: 24px;
+        height: 24px;
+    }
+}

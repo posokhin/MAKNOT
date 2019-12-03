@@ -1,0 +1,23 @@
+.banner-more{
+    padding: 80px 0;
+    background: url("img/banner-more.webp") no-repeat center/cover;
+    @include media(600){
+        padding: 40px 0;
+        background: url("img/banner-more-m.webp") no-repeat center/cover;
+        h2{
+            font-size: 24px;
+        }
+    }
+    &__content{
+        h2,p{
+            color: white;
+        }
+        h2{
+            margin-bottom: 16px;
+        }
+        p{
+            max-width: 440px;
+            margin-bottom: 32px;
+        }
+    }
+}

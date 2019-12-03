@@ -1,0 +1,43 @@
+.top-banner{
+    background: url('img/top-banner/back.png');
+    &__row{
+        justify-content: space-between;
+    }
+    img{
+        display: flex;
+        align-items: center;
+    }
+    &__col{
+        p{
+            color: #f1f3f5;
+            font-family: $play;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.75px;
+            margin: 0;
+            &:last-child{
+                font-size: 24px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;         
+            }        
+            @include media(767){
+                line-height: normal;
+                font-size: 12px;    
+                letter-spacing: 0.5px;
+                &:last-child{
+                    font-size: 16px;
+                    letter-spacing: 0.67px;
+                } 
+            }
+        }
+        @include media(767){
+            &:last-child{
+                display: none;
+            }
+            img{
+                width: 80px;
+            }
+        }
+    }
+}

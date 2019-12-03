@@ -1,0 +1,48 @@
+header.header
+    .container
+        .header__row.flex-wrap.aic
+            .header__col.header__col--logo.flex.aic
+                .header__burger
+                    .header__burger-btn
+                        span
+                        span
+                        span
+                a(href="").header__logo
+                    img(src="img/logo.png", alt="")
+            .header__col.header__col--menu
+                ul.menu.flex.aic
+                    include ../blocks/menu.pug
+                    +menu__item('О компании','active')
+                    +menu__item('Продукция')
+                    +menu__item('Бренды')
+                    +menu__item('Где купить')
+                    +menu__item('Новости и акции')
+            .header__col.header__col--right.flex.aic
+                a(href="tel:8 (800) 222-22-44").header__phone.header__col--right-item 8 (800) 222-22-44
+                .header__search.header__col--right-item.js-open-search
+                    i.i-Search
+                a(href="").header__auth.header__col--right-item
+                    i.i-user
+                a(href="").header__cart.header__col--right-item
+                        i.i-cart
+                .header__lang.header__col--right-item.js-open-lang
+                    .header__lang-current.flex.aic
+                        span RUS
+                        i.i-arrow--down-small
+                    ul.header__lang-list
+                        li.header__lang-item
+                            a(href="") EN
+            .search
+                .search__logo
+                    a(href="")
+                        img(src="img/logo.png", alt="")
+                form(action="" method="").search__form.flex.aic
+                    .search__field.flex.aic
+                        .search__icon
+                            i.i-Search
+                        input(type="text" placeholder="Что будем искать?")
+                    .search__controls.flex.aic
+                        button(type="submit").btn.btn--orange.search__btn Поиск
+                        .search__close
+                            i.i-close
+include ../blocks/m-menu

@@ -1,0 +1,28 @@
+.block-main{
+    &__slider{
+        &-info{
+            color: #212529;
+            &-top{
+                margin-bottom: 48px;
+            }
+            &-title{
+                font-family: $play;
+                font-size: 40px;
+                font-weight: 700;
+                letter-spacing: 1.67px;
+                margin-bottom: 16px;
+                @include media(768){
+                    font-size: 32px;
+                    letter-spacing: 1.33px;
+                }
+            }
+            p{
+                margin-bottom: 32px;
+                @include media(768){
+                    max-width: 450px;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}

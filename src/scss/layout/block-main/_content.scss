@@ -1,0 +1,33 @@
+.block-main{
+    &__slider{
+        &-content{
+            height: 400px;
+            .background{
+                border-radius: 50%;
+                content: "";
+                display: block;
+                width: 400px;
+                height: 400px;
+                @include absCenter;
+                transition: 1s;
+                @include media(850){
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+        &-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;      
+            img{
+                position: relative;
+                z-index: 1;
+                animation-duration: 3s;
+                @include media(850){
+                    width: 200px;
+                }
+            }
+        }
+    }
+}

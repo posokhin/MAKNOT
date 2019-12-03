@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title 404
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include templates/header
+            .error
+                .error__row.flex-wrap
+                    .error__col
+                        img(src="img/404.png", alt="")
+                    .error__col.error__col--text
+                        h3 404: Страница не найдена
+                        p Похоже вы допустили опечатку, набирая адрес, или воспользовались неисправной ссылкой. 
+                        p Чтобы найти нужные предложения, воспользуйтесь формой поиска на главной странице.
+                        a(href="").btn.btn--black.btn--icon
+                            span Перейти на главную
+                            i.i-home
+        include templates/footer
+        include blocks/scripts
