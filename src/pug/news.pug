@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-- var count = 4
+- var newsPage = true
+- var count = 8
+- var sale = true
+- var bread = true
+- var breadItems = ['Главная', 'Новости и акции']
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title main
+        title NEWS
         link(rel="stylesheet", href="style.css")
-    body
+    body.news-page
         .wrapper
             include blocks/top-banner
             include templates/header
-            include templates/block-main
-            include templates/filter
-            include templates/news
             include templates/banner
+            include templates/news.pug
         include templates/footer
         include blocks/scripts

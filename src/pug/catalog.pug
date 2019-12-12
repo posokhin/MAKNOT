@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Продукция']
+- topTitle = 'Наша продукция'
+- topDescription = 'В батареях «FQ» за счет применения высококачественных комплектующих и больших производственных объемов есть баланс улучшенных показателей по емкости, приемлемой стоимости и надежности. '
+- topBtn = true
+- rightColBase = true
+- rowAlign = 'aic'
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title CATALOG
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            include blocks/detail-top
+            include blocks/catalog-cards
+            include templates/banner
+        include templates/footer
+        include blocks/scripts

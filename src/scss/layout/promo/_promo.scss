@@ -1,0 +1,115 @@
+.promo{
+    background: #ffffff;
+    padding: 80px 0  48px;
+    @include media(1100){
+        padding: 32px 0;
+    }
+    &__row{
+        margin: 0 -16px;
+        @include media(1100){
+            margin: 0;
+        }
+    }
+    &__col{
+        padding: 0 16px;
+        @include col(6);
+        &:first-child{
+            @include col(5);
+            margin-right: auto;
+        }
+        @include media(1100){
+            width: 100%;
+            padding: 0;
+            &:first-child{
+                width: 100%;
+                margin: 0;
+                margin-bottom: 32px;
+            }
+        }
+    }
+    &__text{
+        p{
+            font-size: 16px;
+            color: #131415;
+            font-weight: 500;
+            letter-spacing: 0.67px;
+            line-height: 28.89px;
+        }
+        ul{
+            margin-top: 32px;
+            list-style-type: disc;
+            list-style-position: inside;
+            @include media(1100){
+                margin-top: 16px;
+            }
+            li{
+                color: #131415;
+                font-size: 14px;
+                letter-spacing: 0.58px;
+                line-height: 24.89px;
+            }
+        }
+    }
+    &__products{
+        &-top{
+            margin-bottom: 24px;
+            &-title{
+                color: #131415;
+                font-family: $play;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0.83px;     
+                @include media(768){
+                    font-size: 18px;
+                } 
+            }
+            a{
+                @include media(500){
+                    display: none;
+                }
+            }
+        }
+        &-list{
+            margin: 0 -16px;
+            @include media(500){
+                margin: 0;
+            }
+        }
+        &-item{
+            padding: 0 16px;
+            margin-bottom: 32px;
+            width: 50%;
+            @include media(500){
+                width: 100%;
+                padding: 0;
+            }
+            a{
+                display: block;
+            }
+        }
+        &-img{
+            border-radius: 4px;
+            border: 1px solid #f8f9fa;
+            background-color: #f8f9fa;      
+            padding: 24px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        &-title{
+            color: #212529;
+            font-weight: 500;
+            letter-spacing: 0.58px;
+            line-height: 20px;      
+        }
+    }
+    &__bottom{
+        text-align: center;
+        width: 100%;
+        &-link{
+            display: none;
+            @include media(500){
+                display: block;
+            }
+        }
+    }
+}

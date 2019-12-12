@@ -1,0 +1,95 @@
+.detail{
+    position: relative;
+    &__top{
+        position: relative;
+        padding: 100px 0 32px;
+        background-color: #f8f9fa;
+        @include media(850){
+            padding: 32px 0 0;
+        }
+        &-element{
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            @include media(850){
+                display: none;
+            }
+            background:linear-gradient(135deg, transparent 300px, #e9ecef 0);
+            width: 800px;
+        }
+        h1{
+            font-size: 32px;
+            margin-bottom: 16px;
+            @include media(768){
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+        }
+        .breadcrubms{
+            position: absolute;
+            top: 18px;
+            @include media(850){
+                display: none;
+            }
+        }
+        &-row{
+            margin: 0 -16px;
+            @include media(850){
+                margin: 0;
+            }
+        }
+        &-col{
+            position: relative;
+            @include col(7);
+            padding: 0 16px;
+            &--img{
+                @include col(4);
+                display: flex;
+                justify-content: flex-end;
+                @include media(850){
+                    justify-content: flex-start;
+                    margin-top: 32px;
+                }
+            }
+            @include media(850){
+                width: 100%;
+                padding: 0;
+            }
+        }
+        &-info{
+            @include media(850){
+                margin-top: 32px;
+            }
+        }
+        &-img{
+            display: flex;
+            align-items: center;
+            &--abs{
+                position: absolute;
+                @include media(850){
+                    position: static;
+                }
+                img{
+                    width: 22vw;
+                    min-width: 300px;
+                }
+            }
+        }
+    }
+    &__date{
+        margin-left: 24px;
+        color: #adb5bd;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.58px;
+    }
+    &__description{
+        padding: 64px 0 120px;
+        background-color: #ffffff;
+        @include media(850){
+            padding: 32px 0 0;
+            background-color: #f8f9fa;
+        }
+    }
+}

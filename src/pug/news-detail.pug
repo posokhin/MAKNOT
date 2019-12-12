@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+- var newsPage = false
+- var count = 2
+- var sale = true
+- var breadItems = ['Главная', 'Новости и акции', 'Новые поступления масленных фильтров от наших партнеров «FQ»']
+- var topTitle = 'Теперь вы можете купить фирменное моторное масло'
+- var topDescription = 'Среди наших товаров появилась новая категория — машинное масло от комании FUJITO CORPORATION.'
+- var date = '30.11.2019'
+- var topSale = true
+- var rightColAbs = true
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title NEWS-DETAIL
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            include blocks/detail-top
+            .detail__description
+                .container
+                    p Моторные масла — масла, применяемые для смазывания поршневых и роторных двигателей внутреннего сгорания. 
+                    p Все современные моторные масла состоят из базовых масел и улучшающих их свойства присадок. В качестве базовых масел обычно используют дистиллятные и остаточные компоненты различной вязкости (углеводороды), их смеси, углеводородные компоненты полученные гидрокрекингом и гидроизомеризацией, а также синтетические продукты (высокомолекулярные углеводороды, полиальфаолефины, сложные эфиры и другие). 
+                    p Большинство всесезонных масел получают путём загущения маловязкой основы макрополимерными присадками.
+                    a(href="").btn.btn--icon.btn--border.btn--bordered-blue
+                        span Перейти в каталог
+                        i.i-more
+            include templates/news.pug
+            include templates/banner
+        include templates/footer
+        include blocks/scripts

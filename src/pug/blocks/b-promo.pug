@@ -1,0 +1,33 @@
+.promo
+    .container
+        .promo__row.flex-wrap
+            .promo__col
+                .promo__text
+                    h1 Акция на автомобильные аккумуляторы FQ
+                    p В батареях “FQ” за счет применения высококачественных комплектующих и больших производственных объемов есть баланс улучшенных показателей по емкости, приемлемой стоимости и надежности. 
+                    ul
+                        li Линейка доступна для большинства автомобилей японского производства.
+                        li Аккумуляторы имеют встроенный искрогаситель. 
+                        li ​Удобную ручку для переноски. 
+                        li Герметичную крышку с защитой от проливания. 
+                        li Особый метод сварки и новейшие материалы. 
+                        li Решетка изготовлена по новейшей технологии “anti — punch”.
+            .promo__col
+                .promo__products
+                    .promo__products-top.flex.aic.jcsb
+                        .promo__products-top-title Товары участвующие в акции
+                        a(href="").btn.btn--icon.btn--more
+                            span Все товары
+                            i.i-more.i-more--orange
+                    ul.promo__products-list.flex-wrap
+                        -for(var i = 0; i < 4; i++)
+                            li.promo__products-item
+                                a(href="")
+                                    .promo__products-img
+                                        img(src="img/promo.png", alt="")
+                                    .promo__products-title Аккумуляторная батарея 90D23L
+                        .promo__bottom
+                            .promo__bottom-link
+                                a(href="").btn.btn--icon.btn--more
+                                    span Все товары
+                                    i.i-more.i-more--orange

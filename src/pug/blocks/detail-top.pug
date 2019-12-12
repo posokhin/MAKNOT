@@ -1,0 +1,35 @@
+- var topTitle
+- var topDescription
+- var date
+- var topSale
+- var topBtn
+- var rightColAbs
+- var rightColBase
+- var rowAlign
+- var breadItems
+.detail
+    .detail__top
+        .detail__top-element
+        .container
+            include breadcrubms
+            .detail__top-row.flex-wrap(class=rowAlign)
+                .detail__top-col
+                    h1=topTitle
+                    p=topDescription
+                    .detail__top-info.flex.aic
+                        if topSale
+                            .mark.mark--sale Акция
+                        if date
+                            .detail__date=date
+                        if topBtn
+                            a(href="").btn.btn--icon.btn--orange
+                                span Скачать прайс
+                                i.i-download
+                if rightColAbs
+                    .detail__top-col.detail__top-col--img
+                        .detail__top-img.detail__top-img--abs
+                            img(src="img/detail/detail-news.png", alt="")
+                if rightColBase
+                    .detail__top-col.detail__top-col--img
+                        .detail__top-img
+                            img(src="img/catalog-top.png", alt="")

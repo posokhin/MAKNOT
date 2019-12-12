@@ -1,8 +1,11 @@
-section.banner-more
+- var bread
+section.banner
     .container
-        .banner-more__content
+        .banner__content 
+            if bread
+                include ../blocks/breadcrubms
             h2.h1 Аккумуляторы
             p В батареях «FQ» за счет применения высококачественных комплектующих и больших производственных объемов есть баланс улучшенных показателей по емкости, приемлемой стоимости и надежности. 
             a(href="").btn.btn--bordered.btn--bordered-white.btn--icon
                 span Подробнее
-                i.i-more
+                i.i-more.i-more--orange

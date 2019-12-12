@@ -1,0 +1,33 @@
+.breadcrubms{
+    @include media(768){
+        display: none;
+    }
+    &__list{
+        flex-wrap: wrap;
+    }
+    &__item{
+        a{
+            opacity: 0.5;
+            color: #495057;
+            font-family: $play;
+            font-size: 14px;  
+        }
+        &::before{
+            content: "/";
+            opacity: 0.5;
+            color: #495057;
+            margin: 0 8px;
+        }
+        &:first-child{
+            &::before{
+                display: none;
+            }
+        }
+        &:last-child{
+            a{
+                opacity: 1;
+                pointer-events: none;
+            }
+        }
+    }
+}

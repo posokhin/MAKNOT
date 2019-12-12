@@ -28,6 +28,10 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 h1,.h1{
     font-size: 40px;
     letter-spacing: 1.67px;   
+    @include media(768){
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
 }
 h2,.h2{
     font-size: 32px;   

@@ -113,5 +113,23 @@ i{
         background: url("img/icons/i-more.svg") no-repeat center/contain;
         width: 24px;
         height: 24px;
+        &--orange{
+            background: url("img/icons/i-more--orange.svg") no-repeat center/contain;
+        }
+    }
+    &-lamp{
+        background: url("img/icons/lamp.svg") no-repeat center/contain;
+        width: 22px;
+        height: 31px;    
+    }
+    &-disks{
+        background: url("img/icons/disks.svg") no-repeat center/contain;
+        width: 28px;
+        height: 28px;   
+    }
+    &-shini{
+        background: url("img/icons/shini.svg") no-repeat center/contain;
+        width: 24px;
+        height: 29px;   
     }
 }

@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-- var count = 4
+- var newsPage = false
+- var bread = true
+- var count = 2
+- var sale = true
+- var breadItems = ['Главная', 'Новости и акции', 'Новые поступления масленных фильтров от наших партнеров «FQ»']
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title main
+        title PROMO
         link(rel="stylesheet", href="style.css")
     body
         .wrapper
             include blocks/top-banner
             include templates/header
-            include templates/block-main
-            include templates/filter
-            include templates/news
             include templates/banner
+            include blocks/b-promo
+            include templates/news.pug
         include templates/footer
         include blocks/scripts
