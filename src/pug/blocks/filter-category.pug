@@ -1,0 +1,51 @@
+.filter
+    .filter__toggler.flex.aic.jcsb
+        span Фильтры
+        .filter__toggler-btn
+            i.i-form-filter.active
+            i.i-close
+    form(action="").filter__form
+        ul.filter__list
+            li.filter__item
+                input(type="hidden")
+                .filter__item-name Тип авто
+                .filter__item-current.flex.aic.jcsb
+                    span Любой
+                    i.i-arrow--blue-small
+                ul.filter__item-sublist
+                    li.filter__item-subitem(data-value="45") 45
+                    li.filter__item-subitem(data-value="65") 65
+                    li.filter__item-subitem(data-value="85") 85
+            li.filter__item
+                input(type="hidden")
+                .filter__item-name Тип аккумулятора
+                .filter__item-current.flex.aic.jcsb
+                    span Любой
+                    i.i-arrow--blue-small
+                ul.filter__item-sublist
+                    li.filter__item-subitem(data-value="45") 45
+                    li.filter__item-subitem(data-value="65") 65
+                    li.filter__item-subitem(data-value="85") 85
+            li.filter__item
+                input(type="hidden")
+                .filter__item-name Емкость
+                .filter__item-current.flex.aic.jcsb
+                    span Любой
+                    i.i-arrow--blue-small
+                ul.filter__item-sublist
+                    li.filter__item-subitem(data-value="45") 45
+                    li.filter__item-subitem(data-value="65") 65
+                    li.filter__item-subitem(data-value="85") 85
+            li.filter__item
+                input(type="hidden")
+                .filter__item-name Производитель
+                .filter__item-current.flex.aic.jcsb
+                    span Любой
+                    i.i-arrow--blue-small
+                ul.filter__item-sublist
+                    li.filter__item-subitem(data-value="45") 45
+                    li.filter__item-subitem(data-value="65") 65
+                    li.filter__item-subitem(data-value="85") 85
+        button(type="submit").btn.btn-filter
+            span Подобрать
+            i.i-more

@@ -1,0 +1,35 @@
+.catalog{
+    padding: 64px 0 80px;
+    background: white;
+    @include media(768){
+        padding: 32px 0;
+    }
+    &__row{
+        margin: 0 -20px;
+        @include media(1100){
+            margin: 0;
+        }
+    }
+    &__col{
+        padding: 0 20px;
+        @include media(1100){
+            width: 100%;
+            padding: 0;
+        }
+        &--filter{
+            @include col(3);
+            @include media(1100){
+                margin-bottom: 24px;
+            }
+        }
+        &--products{
+            @include col(9);
+            .pagination{
+                margin-top: 32px;
+                @include media(768){
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+}

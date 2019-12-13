@@ -1,0 +1,123 @@
+.filter{
+    font-family: $play;
+    color: #212529;
+    &__form{
+        padding: 40px;
+        background-color: #f8f9fa;
+        @include media(1250){
+            padding: 24px;
+        }
+        @include media(1100){
+            display: none;
+        }
+        @include media(768){
+            padding: 16px;
+        }
+        button{
+            width: 100%;
+            @include media(1100){
+                max-width: 256px;
+            }
+        }
+        &.open{
+            display: block;
+        }
+    }
+    &__item{
+        position: relative;
+        margin-bottom: 32px;
+        &.active{
+            .filter__item-current{
+                border: 1px solid #0081f0;
+                border-top-right-radius: 2px;
+                border-top-left-radius: 2px;
+                border-bottom: 1px solid transparent;
+                i{
+                    transform: rotate(180deg);
+                }
+            }
+            .filter__item-sublist{
+                display: block;
+            }
+        }
+        &-name{
+            margin-bottom: 8px;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            line-height: 16px;
+        }
+        &-current{
+            border: 1px solid #dee2e6;
+            cursor: pointer;
+            background-color: #ffffff;
+            padding: 16px;
+            height: 48px;
+            justify-content: space-between;
+            span{
+                font-size: 12px;
+                letter-spacing: 0.26px;
+                line-height: 16px;
+            }
+        }
+        &-sublist{
+            display: none;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            left: 0px;
+            background-color: #ffffff;
+            border: 1px solid #0081f0;
+            border-top: 0;
+            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+            padding: 0 8px 8px 8px;
+            z-index: 1;
+        }
+        &-subitem{
+            padding: 8px;
+            color: #212529;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.26px;
+            line-height: 16px;
+            cursor: pointer;
+            &:hover,&.active{
+                background-color: #00acff;
+                color: white;     
+            }
+        }
+    }
+    &__toggler{
+        display: none;
+        height: 56px;
+        cursor: pointer;
+        background: #F8F9FA;
+        border-radius: 2px;
+        padding: 24px;   
+        @include media(1100){
+            display: flex;
+        }
+        @include media(768){
+            padding: 16px;
+        }
+        span{
+            font-weight: bold;
+            line-height: 16px;
+            letter-spacing: 0.346667px;
+            color: #0081F0;
+        }
+        i{
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+        .i-close{
+            width: 20px;
+            height: 20px;
+            &::before,&::after{
+                background: #0081F0; 
+            }
+        }
+    }
+}
