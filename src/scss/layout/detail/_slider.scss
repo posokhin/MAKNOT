@@ -1,0 +1,21 @@
+.detail-slider{
+    position: absolute;
+    max-width: 440px;
+    width: 100%;
+    top: 26px;
+    @include media(850){
+        position: static;
+        max-width: 100%;
+    }
+    &__container{
+        margin-bottom: 16px;
+        box-shadow: 0px 18px 30px rgba(0, 46, 85, 0.0475852);
+    }
+    &__item{
+        padding: 100px 50px;
+        background: white;
+        @include media(500){
+            padding: 50px;
+        }
+    }
+}

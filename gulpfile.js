@@ -20,10 +20,10 @@ gulp.task('sass', function () {
             cascade: false
         }))
         .pipe(gcmq())
-        .pipe(cleanCSS({
+        /* .pipe(cleanCSS({
             compatibility: 'ie8',
             format: 'keep-breaks'
-        }))
+        })) */
         .pipe(browserSync.stream())
         .pipe(gulp.dest('./src/css/'));
 });

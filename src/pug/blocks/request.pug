@@ -1,0 +1,38 @@
+section.request
+    .container
+        .request__content
+            .request__row.flex-wrap.aic
+                .request__col.request__col--info
+                    .request__title Оставьте заявку на оптовое сотрудничество
+                    .request__desc
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo
+                .request__col.request__col--form
+                    form(action="").form
+                        .filter__item
+                            input(type='hidden')
+                            .filter__item-current.flex.aic.jcsb
+                                span Выберите ваш регион
+                                i.i-arrow--blue-small
+                            ul.filter__item-sublist
+                                li.filter__item-subitem(data-value='Санкт-Петербург') Санкт-Петербург
+                                li.filter__item-subitem(data-value='Москва') Москва
+                                li.filter__item-subitem(data-value='Лондон') Лондон
+                        .form__item
+                            .form__placeholder Ваше имя
+                            input(type="text" name="name")
+                        .form__item
+                            .form__placeholder Ваш e-mail
+                            input(type="text" name="email")
+                        .form__item
+                            .form__placeholder Телефон
+                            input(type="text" name="phone")
+                        .form__item
+                            .form__placeholder Комментарий
+                            textarea
+                        button(type="submit").btn.btn--icon.btn--orange
+                            span Отправить
+                            i.i-download.i-download--right
+                        .form__privacy  
+                            p Нажимая кнопку «Отправить» вы соглашаетесь с 
+                                a(href="") политикой конфиденциальности

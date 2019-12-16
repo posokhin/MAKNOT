@@ -7,6 +7,35 @@
         @include media(850){
             padding: 32px 0 0;
         }
+        &-list{
+            max-width: 320px;
+            li{
+                justify-content: space-between;
+                align-items: baseline;
+                margin-bottom: 8px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                span{
+                    display: block;
+                    font-weight: 600;
+                    font-size: 10px;
+                    letter-spacing: 0.216667px;
+                    text-transform: uppercase;
+                    
+                    color: #ADB5BD;
+                }
+                p{
+                    width: 60%;
+                    margin-left: auto;
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0.583333px;
+                    color: #212529;
+                }
+            }
+        }
         &-element{
             position: absolute;
             right: 0;
@@ -52,14 +81,51 @@
                     margin-top: 32px;
                 }
             }
+            &--slider{
+                @include col(4);
+                position: relative;
+                @include media(850){
+                    margin-top: 32px;
+                }
+            }
             @include media(850){
                 width: 100%;
                 padding: 0;
+            }
+            &--producs-detail{
+                h1{
+                    margin: 8px 0 24px;
+                }
+                .detail__top-info{
+                    margin-top: 32px;
+                    a{
+                        &:first-child{
+                            margin-right: 32px;
+                        }
+                    }
+                    @include media(450){
+                        flex-direction: column;
+                        align-items: flex-start;
+                        a{
+                            &:last-child{
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                }
             }
         }
         &-info{
             @include media(850){
                 margin-top: 32px;
+            }
+            .price{
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 42px;
+                letter-spacing: 1.33333px;
+                color: #212529;      
+                margin-right: 48px;    
             }
         }
         &-img{
@@ -72,7 +138,7 @@
                 }
                 img{
                     width: 22vw;
-                    min-width: 300px;
+                    min-width: 280px;
                 }
             }
         }
@@ -88,8 +154,11 @@
         padding: 64px 0 120px;
         background-color: #ffffff;
         @include media(850){
-            padding: 32px 0 0;
+            padding: 32px 0;
             background-color: #f8f9fa;
+        }
+        h5{
+            margin-bottom: 8px;
         }
     }
 }

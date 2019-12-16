@@ -1,12 +1,19 @@
 - var topTitle
 - var topDescription
+
 - var date
 - var topSale
+
 - var topBtn
+- var topBtnText = topBtnText||'Скачать прайс'
+
 - var rightColAbs
 - var rightColBase
+
 - var rowAlign
+
 - var breadItems
+
 .detail
     .detail__top
         .detail__top-element
@@ -23,7 +30,7 @@
                             .detail__date=date
                         if topBtn
                             a(href="").btn.btn--icon.btn--orange
-                                span Скачать прайс
+                                span=topBtnText
                                 i.i-download
                 if rightColAbs
                     .detail__top-col.detail__top-col--img

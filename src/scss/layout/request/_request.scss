@@ -1,0 +1,73 @@
+.request{
+    background: url("img/request-back.png") no-repeat center/cover;
+    @include media(768){
+        padding: 32px 0;
+    }
+    &__content{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    &__col{
+        @include media(768){
+            width: 100%;
+        }
+        &--info{
+            @include col(6);
+            margin-right: auto;
+            color: white;
+            @include media(768){
+                margin-bottom: 16px;
+            }
+        }
+        &--form{
+            @include col(4);
+            position: relative;
+            @include media(1100){
+                @include col(5);
+            }
+            &::after{
+                content: "";
+                display: block;
+                background: url('img/Mask.svg') no-repeat center;
+                width: 720px;
+                height: calc(100% + 80px);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                @include media(768){
+                    height: 100%;
+                }
+            }
+            form{
+                position: relative;
+                z-index: 1;
+                transform: translateY(-40px);
+                @include media(768){
+                    transform: none;
+                }
+            }
+        }
+    }
+    &__title{
+        font-family: $play;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 1.33px;      
+        margin-bottom: 24px;
+        @include media(768){
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+    }
+    &__desc{
+        p{
+            color: #ffffff;
+            font-size: 14px;
+            letter-spacing: 0.58px;
+            line-height: 24.89px;
+        }
+    }
+}

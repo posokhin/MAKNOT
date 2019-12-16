@@ -61,6 +61,14 @@
                 color: #fbfbfb;
             } 
         }
+        &-orange{
+            border: 1px solid #ff5a00;    
+            color: #ff5a00;
+            &:hover{
+                background: #ff5a00;
+                color: white;
+            }
+        }
     }
     &-filter{
         justify-content: space-between;

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Продукция', 'Аккумуляторы', 'Аккумуляторная батарея 90D23L']
+- topTitle = 'Аккумуляторная батарея 90D23L'
+- topDescription = 'В батареях «FQ» за счет применения высококачественных комплектующих и больших производственных объемов есть баланс улучшенных показателей по емкости, приемлемой стоимости и надежности. '
+- topBtn = true
+- rightColBase = true
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title CATALOG
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            .detail
+                .detail__top
+                    .detail__top-element(style="background: linear-gradient(135deg,transparent 300px,#0096FF 0);")
+                    .container
+                        include blocks/breadcrubms
+                        .detail__top-row.flex-wrap(class=rowAlign)
+                            .detail__top-col.detail__top-col--producs-detail
+                                ul.detail__top-list
+                                    li.flex.aic
+                                        span Штрихкод
+                                        p 4580041490085
+                                h1=topTitle
+                                ul.detail__top-list
+                                    li.flex.aic
+                                        span Бренд
+                                        p FUJITO QUALITY, Япония
+                                    li.flex.aic
+                                        span Ёмкость
+                                        p 42Ah
+                                    li.flex.aic
+                                        span Маркировка
+                                        p 46B19
+                                .detail__top-info.flex.aic
+                                    .price 16 456 ₽
+                                    a(href="").btn.btn--icon.btn--blue
+                                        span Добавить в корзину
+                                        i.i-more.i-more-blue-dark
+                            .detail__top-col.detail__top-col--slider
+                                .detail-slider
+                                    .detail-slider__container.swiper-container.js-slider-detail
+                                        ul.detail-slider__list.swiper-wrapper
+                                            li.detail-slider__item.swiper-slide
+                                                img(src="img/catalog/products/1.png", alt="")
+                                            li.detail-slider__item.swiper-slide
+                                                img(src="img/catalog/products/1.png", alt="")
+                                            li.detail-slider__item.swiper-slide
+                                                img(src="img/catalog/products/1.png", alt="")
+                                            li.detail-slider__item.swiper-slide
+                                                img(src="img/catalog/products/1.png", alt="")
+                                    .js-slider-pagination-container.block-main__slider-pagination.flex.aic
+                                        .block-main__slider-pagination-prev.js-detail-slider-prev
+                                            i.i-arrow
+                                        .block-main__slider-pagination-list.swiper-container.js-slider-detail-pagination
+                                            ul.flex.aic.swiper-wrapper
+                                                li.swiper-slide
+                                                    span 01
+                                                    .line
+                                                        span
+                                                li.swiper-slide 
+                                                    span 02
+                                                    .line
+                                                        span
+                                                li.swiper-slide 
+                                                    span 03
+                                                    .line
+                                                        span
+                                                li.swiper-slide 
+                                                    span 04
+                                                    .line
+                                                        span
+                                        .block-main__slider-pagination-next.js-detail-slider-next
+                                            i.i-arrow
+                .detail__description
+                    .container
+                        .content
+                            h5 Основные достоинства
+                            ul.list.list--bullet
+                                li Оригинальное японское качество
+                                li Решетка изготовлена по новейшей технологии «ANTI-PUNCH»
+                                li Эксплуатация в широком диапазоне температур от -40°C до +60°C
+                                li Особый метод сварки и новейшие материалы
+                                li Аккумуляторы имеют встроенный искрогаситель
+                                li Устойчивость к циклическим режимам (разряд-заряд)
+                            h5 Совместимость
+                            p TH 52 Mahle Original, термостат на AUDI A1, Sportback, A3 II (8P) Sportback, (8P)лет, (8P), SEAT Altea, XL, Ibiza IV, Sportcoupe IV, ST, Leon II, Toledo IV, SKODA Fabia II (54), Octavia (A5), Rapid (NH), Spaseback (NH) , Roomster (5J), Praktik (5J), Yeti, VW Beetle II, Caddy III, Golf VI, VIлет, VI, V Plus, Jetta IV, Polo V (6R) и Touran II. 
+                            .pdf.flex.aic
+                                i.i-pdf
+                                .pdf__info
+                                    a(href="") Скачать документ с характеристиками
+                                    span FQ-90d23l.pdf, 2.43 мб
+
+
+            include templates/banner
+        include templates/footer
+        include blocks/scripts

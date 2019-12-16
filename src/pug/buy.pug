@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Где купить']
+- topTitle = 'Где купить'
+- topDescription = 'Наши товары вы можете купить как в розницу так и оптом. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo'
+- rowAlign = 'aic'
+- var topBtn = true
+- var topBtnText = 'Оставить заявку на оптовое сотрудничетво'
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title CATALOG
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            include blocks/detail-top
+            section.buy
+                .container
+                    .buy__tabs
+                        ul.flex
+                            li.active Розничным покупателям
+                            li Оптовым покупателям
+                    .buy__tabs-content.active
+                        h3 Диллеры 
+                        .buy__row.flex-wrap
+                            .buy__col.buy__col--list                            
+                                .filter__item
+                                    input(type='hidden')
+                                    .filter__item-current.flex.aic.jcsb
+                                        span Выберите ваш регион
+                                        i.i-arrow--blue-small
+                                    ul.filter__item-sublist
+                                        li.filter__item-subitem(data-value='Санкт-Петербург') Санкт-Петербург
+                                        li.filter__item-subitem(data-value='Москва') Москва
+                                        li.filter__item-subitem(data-value='Лондон') Лондон
+                                ul.place__list
+                                    -for(var i = 0; i < 10; i+=1)
+                                        li.place__item
+                                            .place__top.flex-wrap.aic.jcsb
+                                                span ООО "Запчасти"
+                                                a(href="").js-open-placeMap Показать на карте
+                                            .place__bottom
+                                                p г. Владивосток, ул. Монтажников, дом 1/4
+                                                a(href="tel:8 (861) 346-76-13")  8 (861) 346-76-13
+                                            .place__map
+                                                iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Aac173196bb292deace9db1be64d03c4b541cbc4c576a427cbdaac6c8b9c062e6&source=constructor', width='100%', height='720', frameborder='0')
+                            .buy__col.buy__col--map     
+                                #map.map
+                                    iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Aac173196bb292deace9db1be64d03c4b541cbc4c576a427cbdaac6c8b9c062e6&source=constructor', width='100%', height='720', frameborder='0')
+                    .buy__tabs-content
+                        h3 Наши адреса  
+                        .buy__row.flex-wrap
+                            .buy__col.buy__col--list
+                                ul.place__list
+                                    li.place__item
+                                        .place__top.flex.aic
+                                            i.i-portfel
+                                            span Главный офис
+                                        .place__bottom
+                                            p г. Владивосток, ул. Монтажников, дом 1/4
+                                            a(href="tel:8 (861) 346-76-13")  8 (861) 346-76-13
+                                    li.place__item
+                                        .place__top.flex.aic
+                                            i.i-box
+                                            span Склад
+                                        .place__bottom
+                                            p г. Владивосток, ул. Монтажников, дом 1/4
+                                            a(href="tel:8 (861) 346-76-13")  8 (861) 346-76-13
+                            .buy__col.buy__col--map     
+                                #map.map
+                                    iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Aac173196bb292deace9db1be64d03c4b541cbc4c576a427cbdaac6c8b9c062e6&source=constructor', width='100%', height='720', frameborder='0')
+            include blocks/request
+        include templates/footer
+        include blocks/scripts

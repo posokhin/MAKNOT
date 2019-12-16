@@ -108,6 +108,9 @@ i{
         background: url("img/icons/i-download.svg") no-repeat center/contain;
         width: 24px;
         height: 24px;
+        &--right{
+            transform: rotate(-90deg);
+        }
     }
     &-more{
         background: url("img/icons/i-more.svg") no-repeat center/contain;
@@ -115,6 +118,11 @@ i{
         height: 24px;
         &--orange{
             background: url("img/icons/i-more--orange.svg") no-repeat center/contain;
+        }
+        &-blue{
+            &-dark{
+                background: url("img/icons/i-more-blue-dark.svg") no-repeat center/contain;
+            }
         }
     }
     &-lamp{
@@ -146,5 +154,18 @@ i{
         background: url("img/icons/i-form-filter.svg") no-repeat center/contain;
         width: 24px;
         height: 24px;   
+    }
+    &-pdf{
+        background: url("img/icons/i-pdf.svg") no-repeat center/contain;
+        width: 32px;
+        height: 32px;     
+    }
+    &-box{
+        font-size: 28px;
+    }
+    &-portfel{
+        background: url("img/icons/portfel.svg") no-repeat center/contain;
+        width: 23px;
+        height: 20px;     
     }
 }

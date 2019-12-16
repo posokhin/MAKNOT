@@ -1,0 +1,50 @@
+.buy{
+    &__tabs{
+        ul{
+            height: 52px;
+            align-items: baseline;
+            @include media(768){
+                height: auto;
+            }
+            li{
+                cursor: pointer;
+                height: 100%;
+                margin-right: 80px;
+                display: flex;
+                align-items: center;
+                display: block;
+                color: #757575;
+                font-family: $play;
+                font-size: 24px;
+                font-weight: 700;
+                letter-spacing: 1px; 
+                line-height: normal;
+                transition: .3s;
+                &.active{
+                    border-bottom: 4px solid #3486c7;
+                    color: #212529; 
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+                @include media(1200){
+                    margin-right: 40px;
+                }
+                @include media(800){
+                    margin-right: 24px;
+                    font-size: 18px;
+                    &.active{
+                        font-size: 24px;    
+                    }
+                }
+                @include media(768){
+                    padding-bottom: 16px;
+                    font-size: 16px;
+                    &.active{
+                        font-size: 16px; 
+                    }
+                }
+            }
+        }
+    }
+}

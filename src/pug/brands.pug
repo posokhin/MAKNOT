@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Брэнды']
+- topTitle = 'Только лучшие бренды'
+- topDescription = 'Наша компания является генеральным дистрибьютором японского холдинга по производситву авто компонентов и расходных материалов FUJITO CORPORATION (Tokio, Japan).'
+- rowAlign = 'aic'
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title CATALOG
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            include blocks/detail-top
+            include blocks/brands-list
+        include templates/footer
+        include blocks/scripts
