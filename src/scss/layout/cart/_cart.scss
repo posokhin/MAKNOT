@@ -120,6 +120,18 @@
         &__bottom{
             padding: 24px 32px;
             background: #F8F9FA;
+            @include media(850){
+                padding: 24px;
+                &-left, &-btn{
+                    width: 100%;
+                    a{
+                        max-width: 240px;
+                        width: 100%;
+                        margin: 0 auto;
+                        justify-content: center;
+                    }
+                }
+            }
             &-left{
                 @include col(8);
                 padding: 0 5px;
@@ -130,6 +142,9 @@
                     width: auto;
                     margin-right: auto;
                 }
+                @include media(850){
+                    order: 1;
+                }
             }
             &-btn{
                 @include col(2);
@@ -139,6 +154,12 @@
                 }
                 @include media(970){
                     width: auto;
+                }
+                @include media(850){
+                    margin: 16px 0;
+                    a{
+                        justify-content: space-between;
+                    }
                 }
             }
         }
@@ -151,6 +172,10 @@
         @include media(970){
             width: auto;
             margin-right: 16px;
+        }
+        @include media(850){
+            width: 100%;
+            justify-content: center;
         }
         padding: 0 5px;
         align-items: baseline;
