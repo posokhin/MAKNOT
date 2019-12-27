@@ -1,14 +1,26 @@
 .cart{
     background: #ffffff;
+    @include media(768){
+        margin-bottom: -50px;
+    }
     &-table{
         transform: translateY(-100px);
         background: #FFFFFF;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+        @include media(850){
+            max-width: 550px;
+            margin: 0 auto;
+        }
         &__row{
+            position: relative;
             align-items: center;
             padding: 24px 0;
             margin: 0 32px;
             border-bottom: 1px solid #F2F2F2;
+            @include media(850){
+                margin: 0;
+                padding: 24px;
+            }
             &--non-bordered{
                 border: 0;
             }
@@ -17,7 +29,17 @@
                 font-weight: 600;
                 letter-spacing: 0.216667px;
                 text-transform: uppercase;
-                color: #ADB5BD;          
+                color: #ADB5BD;         
+                &.m{
+                    display: none;
+                    margin-bottom: 4px;
+                    @include media(850){
+                        display: block;
+                    }
+                } 
+                &.price-old{
+                    text-decoration: line-through;
+                }
             }
             p{
                 font-size: 14px;
@@ -27,9 +49,27 @@
                 color: #212529;    
                 margin: 0;  
             }
+            &--head{
+                @include media(850){
+                    display: none;
+                }
+            }
         }
         &__col{
             padding: 0 5px;
+            @include media(850){
+                width: 100%;
+                padding: 0;
+                text-align: left;
+                margin-bottom: 16px;
+                &:nth-of-type(3), &:nth-of-type(5){
+                    width: 50%;
+                    margin: 0;
+                }
+                .counter{
+                    justify-content: flex-end;
+                }
+            }
             &--1{
                 @include col(1);
             }
@@ -45,6 +85,25 @@
             &--center{
                 text-align: center;
             }
+            &--summ, &--hidden{
+                @include media(850){
+                    display: none;
+                }
+            }
+            &--delete{
+                @include media(850){
+                    width: auto !important;
+                    position: absolute;
+                    top: 24px;
+                    right: 24px;
+                }
+            }
+        }
+        &__img{
+            min-width: 48px;
+            @include media(850){
+                display: none;
+            }
         }
         &__name{
             align-items: center;
@@ -52,6 +111,9 @@
                 margin-left: 24px;
                 p{
                     margin-bottom: 4px;
+                }
+                @include media(850){
+                    margin: 0;
                 }
             }
         }
@@ -61,15 +123,35 @@
             &-left{
                 @include col(8);
                 padding: 0 5px;
+                @include media(1370){
+                    @include col(6);
+                }
+                @include media(970){
+                    width: auto;
+                    margin-right: auto;
+                }
             }
             &-btn{
                 @include col(2);
                 text-align: center;
+                @include media(1370){
+                    @include col(3);
+                }
+                @include media(970){
+                    width: auto;
+                }
             }
         }
     }
     &__total{
         @include col(2);
+        @include media(1370){
+            @include col(3);
+        }
+        @include media(970){
+            width: auto;
+            margin-right: 16px;
+        }
         padding: 0 5px;
         align-items: baseline;
         span{

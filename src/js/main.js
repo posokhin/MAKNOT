@@ -340,7 +340,7 @@ $(document).ready(function () {
         el.addEventListener('click', function(){
             var row = el.parentNode.parentNode;
             $(row).fadeOut(function(){
-                row.remove();
+                row.remove(); 
             });
         });
     });

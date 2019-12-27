@@ -1,9 +1,15 @@
 .checkout{
     &-top{
         padding: 16px 0;
+        @include media(768){
+            padding: 24px 0 124px;
+        }
         &__info{
             margin-top: 48px;
             margin-bottom: 168px;
+            @include media(768){
+                margin: 0;
+            }
             h1{
                 margin: 0;
             }
@@ -14,6 +20,9 @@
                 color: #000000;     
                 i{
                     margin-left: 24px;
+                    @include media(768){
+                        margin-left: 16px;
+                    }
                 }   
             }
         }
