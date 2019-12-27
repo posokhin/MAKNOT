@@ -1,0 +1,11 @@
+.about-page{
+    .news{
+        padding-top: 160px;
+        @include media(1100){
+            padding-top: 80px;
+        }
+        @include media(1000){
+            padding: 40px 0;
+        }
+    }
+}

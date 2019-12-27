@@ -80,4 +80,16 @@
         height: 48px;
         padding: 8px 8px 8px 16px;
     }
+    &-black{
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000000;
+        i{
+            margin-right: 16px;
+            font-size: 24px;
+        }
+    }
 }

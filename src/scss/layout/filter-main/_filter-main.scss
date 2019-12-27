@@ -18,7 +18,7 @@
         }
     }
     &-tabs{
-        height: 64px;
+        height: 52px;
         @include media(600){
             height: 38px;
         }
@@ -35,7 +35,7 @@
             letter-spacing: 1px;
             transition: .3s;
             cursor: pointer;
-            padding-bottom: 24px;
+            padding-bottom: 16px;
             margin-right: 8.5%;
             height: 100%;
             &:last-child{
@@ -51,7 +51,6 @@
                 color: #3486c7;    
             }
             &.active{
-                font-size: 32px;
                 color: #212529;  
                 border-bottom: 4px solid #3486c7;    
                 @include media(600){

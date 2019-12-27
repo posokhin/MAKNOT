@@ -17,7 +17,6 @@
         max-width: 100%;
         padding: 0 16px;
         margin-bottom: 40px;
-        height: 224px;
         @include media(440){
             height: auto;
             margin-bottom: 16px;
@@ -30,12 +29,26 @@
             height: 100%;
             padding: 32px;
             position: relative;
+            height: 224px;
             transition: .3s;
+            &--white{
+                background: #ffffff;
+            }
             &:hover{
                 box-shadow: 0 16px 20px rgba(0, 129, 240, 0.2);
             }
             @include media(440){
                 padding: 24px;
+            }
+        }
+        &__desc{
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: 0.666667px;
+            color: #212529;    
+            margin-top: 24px;  
+            @include media(768){
+                font-size: 14px;
             }
         }
         &__icon{

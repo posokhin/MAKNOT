@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Брэнды']
+- topTitle = 'Качественные запчасти от надежной компании'
+- topDescription = 'Наша компания является генеральным дистрибьютором японского холдинга по производситву авто компонентов и расходных материалов FUJITO CORPORATION (Tokio, Japan).'
+- var rightColAbs = true
+- var rightColImage  = 'img/brands/brands-d.png'
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Brands Detail
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            include blocks/detail-top
+            .detail__description
+                .container
+                    p На сегодняшний день наша компания владеет складными мощностями в Москве и Владивостоке, отлаженными каналами логистики в болльшинстве регионов РФ и стран СНГ
+                    .gallery.flex-wrap.aic.jcsb
+                        .gallery__col
+                            .gallery__slider.swiper-container.js-gallery-slider
+                                ul.gallery__list.swiper-wrapper
+                                    li.gallery__item.swiper-slide(data-name="ФОТО ЛАБОРАТОРИИ")
+                                        img(src="img/brands/gallery.png", alt="")
+                                    li.gallery__item.swiper-slide(data-name="ЛАБОРАТОРИИ ФОТО")
+                                        img(src="img/brands/gallery.png", alt="")
+                                    li.gallery__item.swiper-slide(data-name="ЛАБРОФОТО")
+                                        img(src="img/brands/gallery.png", alt="")
+                                    li.gallery__item.swiper-slide(data-name="ФОТОРИЯ")
+                                        img(src="img/brands/gallery.png", alt="")
+                        .gallery__col.gallery__col--info
+                            .gallery__text
+                                .gallery__title ФОТО ЛАБОРАТОРИИ
+                                p Компания FUJITO CORPORATION была основана в 1988 году в городе Сендай, Япония. На сегодняшний день завод FUJITO CORPORATION входит в 100 крупнейших компаний Японии ипоставляет детали для производства оригинальных автомобильных и промышленных автозапчастей (OEM). 
+                            .thumbs
+                                .thumbs__prev.js-gallery-button-prev
+                                    i.i-arrow
+                                .thumbs__slider.swiper-container.js-gallery-thumbs
+                                    ul.thumbs__list.swiper-wrapper
+                                        li.thumbs__item.swiper-slide
+                                            span 01
+                                            .line
+                                                span
+                                        li.thumbs__item.swiper-slide
+                                            span 02
+                                            .line
+                                                span
+                                        li.thumbs__item.swiper-slide
+                                            span 03
+                                            .line
+                                                span
+                                        li.thumbs__item.swiper-slide
+                                            span 04
+                                            .line
+                                                span
+                                .thumbs__next.js-gallery-button-next
+                                    i.i-arrow
+            include blocks/brands-short
+
+        include templates/footer
+        include blocks/scripts

@@ -1,0 +1,94 @@
+.cart{
+    background: #ffffff;
+    &-table{
+        transform: translateY(-100px);
+        background: #FFFFFF;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+        &__row{
+            align-items: center;
+            padding: 24px 0;
+            margin: 0 32px;
+            border-bottom: 1px solid #F2F2F2;
+            &--non-bordered{
+                border: 0;
+            }
+            span{
+                font-size: 10px;
+                font-weight: 600;
+                letter-spacing: 0.216667px;
+                text-transform: uppercase;
+                color: #ADB5BD;          
+            }
+            p{
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0.583333px;
+                color: #212529;    
+                margin: 0;  
+            }
+        }
+        &__col{
+            padding: 0 5px;
+            &--1{
+                @include col(1);
+            }
+            &--2{
+                @include col(2);
+            }
+            &--4{
+                @include col(4);
+            }
+            &--right{
+                text-align: right;
+            }
+            &--center{
+                text-align: center;
+            }
+        }
+        &__name{
+            align-items: center;
+            .cart-table__info{
+                margin-left: 24px;
+                p{
+                    margin-bottom: 4px;
+                }
+            }
+        }
+        &__bottom{
+            padding: 24px 32px;
+            background: #F8F9FA;
+            &-left{
+                @include col(8);
+                padding: 0 5px;
+            }
+            &-btn{
+                @include col(2);
+                text-align: center;
+            }
+        }
+    }
+    &__total{
+        @include col(2);
+        padding: 0 5px;
+        align-items: baseline;
+        span{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.303333px;
+            text-transform: uppercase;
+            color: #ADB5BD;
+            margin-right: 32px;
+        }
+        p{
+            margin: 0;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 31px;
+            text-align: right;
+            letter-spacing: 1px;
+            color: #212529;
+        }
+    }
+}

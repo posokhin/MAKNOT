@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'О компании']
+- topTitle = 'О КОМПАНИИ «МАКНОТ»'
+- topDescription = 'Группа компаний «МАКНОТ» основана в 2017 году и является генеральным дистрибьютором японского холдинга по производству автокомпонентов и расходных материалов «FUJITO CORPORATION» (Токио, Япония).'
+- var rightColAbs = true
+- var rightColImage = 'img/about.png'
+
+- var count = 4
+- bgClass = 'news--bg-white'
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title О КОМПАНИИ
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper.about-page
+            include blocks/top-banner
+            include templates/header
+            include blocks/detail-top
+            .detail__description
+                .container
+                    p Мы предлагаем оптовым покупателям продукцию высокотехнологичного японского бренда, производство которого ориентировано на рынок РФ. Это автокомпоненты, которые идеально подходят для российских дорог благодаря испытаниям в климатических условиях, максимально приближенных к странам СНГ. 
+                    p Партнёрство «МАКНОТ» с брендом “FQ” — это высокая надежность, эффективность в использовании запчастей и передовые технологии в производстве продукции, которую мы предлагаем своим клиентам.
+                    blockquote.blockquote
+                        p Наша цель — стать надёжным партнёром для оптовых потребителей на территории РФ, при этом применять на практике японский подход к качеству и сервису: «Твой потребитель — исполнитель следующей производственной операции».
+            section.about__description
+                .container
+                    .row.flex-wrap.m-20
+                        .col.col--left.col-5.px20
+                            h2 MAKNOT сегодня
+                            p Это платформа для прямых поставок и реализации качественных аккумуляторных батарей бренда “FQ” и расходных материалов для автомобилей производства Японии. Мы работаем с продукцией, которая соответствует мировым стандартам качества, а также обладает высокими показателями износостойкости.
+                            blockquote.blockquote
+                                p Мы предлагаем нашим оптовым клиентам работать с продукцией уникального бренда, который отличается бережным отношением к природе благодаря переходу на полностью экологически чистое производство.
+                        .col.col--right.col-6.px20
+                            .col-inner  
+                                span Клиенты «МАКНОТ» на территории России и стран СНГ, получают сервис высшего класса. 
+                                .col-inner__item.flex.aic
+                                    i.i-triangle.i-triangle--blue
+                                    p Мы работаем вместе с брендом “FQ”, благодаря чему гарантируем потребителю высокие стандарты качества и работоспособности автокомпонентов данного производителя.
+                                .col-inner__item.flex.aic
+                                    i.i-triangle.i-triangle--black
+                                    p Для удобства потребителей мы установили низкий порог минимального объема оптового заказа, даже небольшие компании могут, сотрудничая с нами, развиваться и наращивать обороты.
+                                .col-inner__item.flex.aic
+                                    i.i-triangle.i-triangle--red
+                                    p Наша компания владеет складскими мощностями в Москве и Владивостоке, отлаженными каналами логистики в большинстве регионов РФ и стран СНГ, что обеспечивает быстрые прямые поставки продукции.
+            section.about__products
+                .container
+                    h2 Сегодня ассортимент компании «МАКНОТ» составляют:
+                    ul.catalog-cards__list.flex-wrap
+                        li.catalog-card
+                            a(href="").catalog-card__link
+                                .catalog-card__title.flex.aic
+                                    .catalog-card__icon 
+                                        i.i-acc
+                                    span Аккумуляторы
+                                .catalog-card__right.catalog-card__right--blue
+                                    img(src="img/catalog/1.png", alt="")
+                            .catalog-card__desc Аккумуляторы бренда “FQ” отличаются улучшенными показателями по емкости, доступной стоимостью и надежностью.
+                        li.catalog-card
+                            a(href="").catalog-card__link
+                                .catalog-card__title.flex.aic
+                                    .catalog-card__icon 
+                                        i.i-filter-water
+                                    span Фильтры
+                                .catalog-card__right.catalog-card__right--green
+                                    img(src="img/catalog/2.png", alt="")
+                            .catalog-card__desc Фильтры японского производства: масляные, топливные, воздушные и салонные.
+                        li.catalog-card
+                            a(href="").catalog-card__link
+                                .catalog-card__title.flex.aic
+                                    .catalog-card__icon 
+                                        i.i-oil
+                                    span Масла
+                                .catalog-card__right.catalog-card__right--orange
+                                    img(src="img/catalog/3.png", alt="")
+                            .catalog-card__desc  В скором времени ассортиментный ряд пополнят автомобильные масла.
+                    blockquote.blockquote.blockquote--card
+                        .blockquote__content
+                            p Вся продукция, предлагаемая нашей компанией потребителю, сертифицирована.
+                            span Мы безукоризненно следуем принципу честности и взаимоуважения покупателей и конечных потребителей, предлагая высочайшие стандарты японского качества деталей.
+            include templates/news
+            include templates/banner
+        include templates/footer
+        include blocks/scripts

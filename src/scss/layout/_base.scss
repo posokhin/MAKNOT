@@ -58,3 +58,73 @@ svg{
         margin: 10px;
     }
 }
+.blockquote{
+    margin: 0;
+    padding-left: 40px; 
+    position: relative;
+    @include media(768){
+        padding-left: 24px;
+    }
+    &--card{
+        background: #FFFFFF;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+        padding: 40px 80px;
+        @include media(768){
+            padding: 16px;
+        }
+        &::after{
+            display: none;
+        }
+        p{
+            max-width: 100%;
+        }    
+    }
+    &__content{
+        position: relative;
+        padding-left: 40px;
+        @include media(768){
+            padding-left: 24px;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #FF772C;
+            box-shadow: 0px 7px 80px rgba(0, 0, 0, 0.1);     
+        }
+    }
+    p{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 29px;
+        letter-spacing: 0.75px;
+        color: #212529;
+        margin: 0 !important;
+        @include media(768){
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    span{
+        display: block;
+        max-width: 870px;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.666667px;
+        color: #212529;
+        margin-top: 8px;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: #FF772C;
+        box-shadow: 0px 7px 80px rgba(0, 0, 0, 0.1);     
+    }
+}

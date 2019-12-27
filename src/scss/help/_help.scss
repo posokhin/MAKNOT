@@ -1,0 +1,55 @@
+.m-20{
+    margin: 0 -20px;
+}
+.m-16{
+    margin: 0 -16px;
+}
+.px20{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.px16{
+    padding: 0 16px;
+}
+.w50{
+    width: 50%;
+}
+.w100{
+    width: 100%;
+}
+.col-1{
+    @include col(1);
+}
+.col-2{
+    @include col(2);
+}
+.col-3{
+    @include col(3);
+}
+.col-4{
+    @include col(4);
+}
+.col-5{
+    @include col(5);
+}
+.col-6{
+    @include col(6);
+}
+.col-7{
+    @include col(7);
+}
+.col-8{
+    @include col(8);
+}
+.col-9{
+    @include col(9);
+}
+.col-10{
+    @include col(10);
+}
+.col-11{
+    @include col(11);
+}
+.col-12{
+    @include col(12);
+}

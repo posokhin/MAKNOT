@@ -2,7 +2,10 @@
 @import '../../node_modules/swiper/css/swiper';
 @import '../../node_modules/animate.css/animate';
 
-@import './help/*.scss';
+@import './help/vars';
+@import './help/mixins';
+@import './help/flex';
+@import './help/_help';
 
 @import './fonts/fonts';
 

@@ -261,29 +261,88 @@ $(document).ready(function () {
     /* buy-tabs end */
 
     /* placemap */
-    $('.js-open-placeMap').on('click', function(e){
+    $('.js-open-placeMap').on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('active').closest('.place__item').find('.place__map').slideToggle();
-        if($(this).hasClass('active')){
+        if ($(this).hasClass('active')) {
             $(this).text('Скрыть');
         }
-        else{
+        else {
             $(this).text('Показать на карте');
         }
     });
     /* placemap end */
 
     /* placeholder */
-    $('.form__item input, .form__item textarea').on('focus', function(){
+    $('.form__item input, .form__item textarea').on('focus', function () {
         $(this).siblings('.form__placeholder').addClass('active');
     });
-    $('.form__item input, .form__item textarea').on('blur', function(){
-        if($(this).val() == ""){
+    $('.form__item input, .form__item textarea').on('blur', function () {
+        if ($(this).val() == "") {
             $(this).siblings('.form__placeholder').removeClass('active');
         }
-        else{
+        else {
             return false;
         }
     });
     /* placeholder end */
+
+    /* gallery slider */
+    function changeGallerTitle() {
+        var title = $('.gallery__item.swiper-slide-active').attr('data-name');
+        $('.gallery__title').text(title);
+    }
+    var sliderGalleryThumbs = new Swiper('.js-gallery-thumbs', {
+        slidesPerView: 4,
+        spaceBetween: 16
+    });
+    var sliderGallery = new Swiper('.js-gallery-slider', {
+        speed: 1000,
+        thumbs: {
+            swiper: sliderGalleryThumbs
+        },
+        navigation: {
+            nextEl: '.js-gallery-button-next',
+            prevEl: '.js-gallery-button-prev',
+        },
+        on: {
+            init: function () {
+                changeGallerTitle();
+            },
+            slideChangeTransitionStart: function () {
+                changeGallerTitle();
+            }
+        }
+    });
+    /* gallery slider end */
+
+    /* counter */
+    document.querySelectorAll('.counter__button--plus').forEach(function(el){
+        el.addEventListener('click', function(){
+            var max = this.parentNode.querySelector('input');
+            max.value++;
+        });
+    });
+
+    document.querySelectorAll('.counter__button--min').forEach(function(el){
+        el.addEventListener('click', function(){
+            var min = this.parentNode.querySelector('input');
+            min.value--;
+            if(min.value <= 0){
+                min.value = 0;
+            }
+        });
+    });
+    /* counter end */
+
+    /* remove cart product */
+    document.querySelectorAll('.js-remove-product').forEach(function(el){
+        el.addEventListener('click', function(){
+            var row = el.parentNode.parentNode;
+            $(row).fadeOut(function(){
+                row.remove();
+            });
+        });
+    });
+    /* remove cart product end */
 });

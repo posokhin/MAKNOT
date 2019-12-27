@@ -1,0 +1,21 @@
+.checkout{
+    &-top{
+        padding: 16px 0;
+        &__info{
+            margin-top: 48px;
+            margin-bottom: 168px;
+            h1{
+                margin: 0;
+            }
+            a{
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 18px;
+                color: #000000;     
+                i{
+                    margin-left: 24px;
+                }   
+            }
+        }
+    }
+}

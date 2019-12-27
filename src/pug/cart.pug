@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Корзина']
+- var chekoutTitle = 'Ваша корзина'
+- var chekoutTopButton = true
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Ваша корзина
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            section.checkout
+                include blocks/checkout-top
+                include blocks/cart
+        include templates/footer
+        include blocks/scripts

@@ -2,7 +2,7 @@
     position: relative;
     &__top{
         position: relative;
-        padding: 100px 0 32px;
+        padding: 100px 0 64px;
         background-color: #f8f9fa;
         @include media(850){
             padding: 32px 0 0;
@@ -159,6 +159,9 @@
         }
         h5{
             margin-bottom: 8px;
+        }
+        blockquote{
+            margin-top: 40px;
         }
     }
 }

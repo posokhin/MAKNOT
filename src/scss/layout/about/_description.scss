@@ -1,0 +1,92 @@
+.about__description{
+    background: url("img/about-desc.png") no-repeat center/cover;
+    @include media(1200){
+        padding: 64px 0;
+    }
+    @include media(768){
+        padding: 32px 0;
+    }
+    .row{
+        @include media(1200){
+            margin: 0;
+        }
+    }
+    .col{
+        &--left{
+            padding: 64px 20px;
+            margin-right: auto;
+            @include media(1300){
+                width: 50%;
+            }
+            @include media(1200){
+                width: 100%;
+                padding: 0;
+                margin-bottom: 32px;
+            }
+            h2{
+                color: white;
+            }
+            p{
+                font-size: 18px;
+                line-height: 29px;
+                letter-spacing: 0.75px;
+                color: #FFFFFF;
+                margin: 32px 0;
+                @include media(768){
+                    font-size: 16px;
+                    margin: 16px 0;
+                }
+            }
+        }
+        &--right{
+            @include media(1200){
+                width: 100%;
+                padding: 0;
+            }
+            .col-inner{
+                background: #FFFFFF;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+                padding: 80px 80px 40px;
+                height: calc(100% + 44px);
+                transform: translateY(-22px);
+                position: relative;
+                z-index: 1;
+                @include media(1300){
+                    padding: 40px;
+                    transform: none;
+                    height: 100%;
+                }
+                @include media(768){
+                    padding: 24px;
+                }
+                span{
+                    font-size: 16px;
+                    line-height: 29px;
+                    letter-spacing: 0.666667px;
+                    color: #000000;        
+                    display: block;
+                    margin-bottom: 24px; 
+                }
+                &__item{
+                    margin-bottom: 24px;
+                    @include media(500){
+                        flex-direction: column;
+                        align-items: flex-start;
+                        i{
+                            margin-bottom: 8px;
+                        }
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    i{
+                        margin-right: 32px;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

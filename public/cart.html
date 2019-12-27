@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>NEWS-DETAIL</title>
+    <title>Ваша корзина</title>
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
@@ -92,76 +92,137 @@
         </ul>
         <div class="m-menu__copy">© 2019, Макнот™</div>
       </div>
-      <div class="detail">
-        <div class="detail__top">
-          <div class="detail__top-element"></div>
+      <section class="checkout">
+        <div class="checkout-top">
           <div class="container">
             <div class="breadcrubms">
               <ul class="breadcrubms__list flex aic">
                 <li class="breadcrubms__item"><a href="">Главная</a></li>
-                <li class="breadcrubms__item"><a href="">Новости и акции</a></li>
-                <li class="breadcrubms__item"><a href="">Новые поступления масленных фильтров от наших партнеров «FQ»</a></li>
+                <li class="breadcrubms__item"><a href="">Корзина</a></li>
               </ul>
             </div>
-            <div class="detail__top-row flex-wrap">
-              <div class="detail__top-col">
-                <h1>Теперь вы можете купить фирменное моторное масло</h1>
-                <p>Среди наших товаров появилась новая категория — машинное масло от комании FUJITO CORPORATION.</p>
-                <div class="detail__top-info flex aic">
-                  <div class="mark mark--sale">Акция</div>
-                  <div class="detail__date">30.11.2019</div>
-                </div>
-              </div>
-              <div class="detail__top-col detail__top-col--img">
-                <div class="detail__top-img detail__top-img--abs"><img src="img/detail/detail-news.png" alt=""/></div>
-              </div>
+            <div class="checkout-top__info flex aic jcsb">
+              <h1>Ваша корзина</h1><a class="flex aic" href=""><span>Очистить корзину</span><i class="i-close"></i></a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="detail__description">
-        <div class="container">
-          <p>Моторные масла — масла, применяемые для смазывания поршневых и роторных двигателей внутреннего сгорания. </p>
-          <p>Все современные моторные масла состоят из базовых масел и улучшающих их свойства присадок. В качестве базовых масел обычно используют дистиллятные и остаточные компоненты различной вязкости (углеводороды), их смеси, углеводородные компоненты полученные гидрокрекингом и гидроизомеризацией, а также синтетические продукты (высокомолекулярные углеводороды, полиальфаолефины, сложные эфиры и другие). </p>
-          <p>Большинство всесезонных масел получают путём загущения маловязкой основы макрополимерными присадками.</p><a class="btn btn--icon btn--border btn--bordered-blue" href=""><span>Перейти в каталог</span><i class="i-more"></i></a>
-        </div>
-      </div>
-      <section class=" news">
-        <div class="container">
-          <div class="news__top flex jcsb">
-            <h2>Новости и акции</h2><a class="news__more btn btn--icon btn--more" href=""><span>Все новости</span><i class="i-more i-more--orange"></i></a>
-          </div>
-          <ul class="news__list flex-wrap">
-            <li class="news__item"><a class="news__link" href="">
-                <div class="news__img"><img src="img/news-main/1.webp" alt=""/></div>
-                <div class="news__date">26.08.2019</div>
-                <div class="news__text">Компания Maknot™ приглашает посетитить выставочный стенд на международной автозапчастей</div></a></li>
-            <li class="news__item"><a class="news__link" href="">
-                <div class="news__img"><img src="img/news-main/1.webp" alt=""/>
-                  <div class="mark mark--sale">Акция</div>
+        <section class="cart">
+          <div class="container">
+            <div class="cart-table">
+              <div class="cart-table__row cart-table__row--head flex-wrap">
+                <div class="cart-table__col cart-table__col--2"><span>Артикул</span></div>
+                <div class="cart-table__col cart-table__col--4"><span>Наименование товара</span></div>
+                <div class="cart-table__col cart-table__col--2"><span>Цена, ₽</span></div>
+                <div class="cart-table__col cart-table__col--2"><span>Количество</span></div>
+                <div class="cart-table__col cart-table__col--1"><span>Сумма, ₽</span></div>
+                <div class="cart-table__col cart-table__col--1"></div>
+              </div>
+              <div class="cart-table__row flex-wrap">
+                <div class="cart-table__col cart-table__col--2">
+                  <p>137456789</p>
                 </div>
-                <div class="news__date">26.08.2019</div>
-                <div class="news__text">Компания Maknot™ приглашает посетитить выставочный стенд на международной автозапчастей</div></a></li>
-            <li class="news__item"><a class="news__link" href="">
-                <div class="news__img"><img src="img/news-main/1.webp" alt=""/></div>
-                <div class="news__date">26.08.2019</div>
-                <div class="news__text">Компания Maknot™ приглашает посетитить выставочный стенд на международной автозапчастей</div></a></li>
-            <li class="news__item"><a class="news__link" href="">
-                <div class="news__img"><img src="img/news-main/1.webp" alt=""/>
-                  <div class="mark mark--sale">Акция</div>
+                <div class="cart-table__col cart-table__col--4">
+                  <div class="cart-table__name flex">
+                    <div class="cart-table__img"><img src="img/cart/1.png" alt=""/></div>
+                    <div class="cart-table__info">
+                      <p>Аккумуляторная батарея 90D23L</p><span>FUJITO QUALITY, Япония / 42Ah / 46B19</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="news__date">26.08.2019</div>
-                <div class="news__text">Компания Maknot™ приглашает посетитить выставочный стенд на международной автозапчастей</div></a></li>
-          </ul><a class="news__more news__more--bottom btn btn--icon btn--more" href=""><span>Все новости</span><i class="i-more i-more--orange"></i></a>
-        </div>
-      </section>
-      <section class="banner">
-        <div class="container">
-          <div class="banner__content"> 
-            <h2 class="h1">Аккумуляторы</h2>
-            <p>В батареях «FQ» за счет применения высококачественных комплектующих и больших производственных объемов есть баланс улучшенных показателей по емкости, приемлемой стоимости и надежности. </p><a class="btn btn--bordered btn--bordered-white btn--icon" href=""><span>Подробнее</span><i class="i-more i-more--orange"></i></a>
+                <div class="cart-table__col cart-table__col--1 cart-table__col--right">
+                  <div class="cart-table__info"><span>2 600</span>
+                    <p>2 400</p>
+                  </div>
+                </div>
+                <div class="cart-table__col cart-table__col--1"></div>
+                <div class="cart-table__col cart-table__col--2">
+                  <div class="counter">   
+                    <div class="counter__button counter__button--min"></div>
+                    <input type="text" value="30"/>
+                    <div class="counter__button counter__button--plus"></div>
+                  </div>
+                </div>
+                <div class="cart-table__col cart-table__col--1 cart-table__col--right">
+                  <p>72 000</p>
+                </div>
+                <div class="cart-table__col cart-table__col--1 cart-table__col--center">
+                  <button class="i-delete js-remove-product"></button>
+                </div>
+              </div>
+              <div class="cart-table__row flex-wrap">
+                <div class="cart-table__col cart-table__col--2">
+                  <p>137456789</p>
+                </div>
+                <div class="cart-table__col cart-table__col--4">
+                  <div class="cart-table__name flex">
+                    <div class="cart-table__img"><img src="img/cart/1.png" alt=""/></div>
+                    <div class="cart-table__info">
+                      <p>Аккумуляторная батарея 90D23L</p><span>FUJITO QUALITY, Япония / 42Ah / 46B19</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-table__col cart-table__col--1 cart-table__col--right">
+                  <div class="cart-table__info"><span>2 600</span>
+                    <p>2 400</p>
+                  </div>
+                </div>
+                <div class="cart-table__col cart-table__col--1"></div>
+                <div class="cart-table__col cart-table__col--2">
+                  <div class="counter">   
+                    <div class="counter__button counter__button--min"></div>
+                    <input type="text" value="30"/>
+                    <div class="counter__button counter__button--plus"></div>
+                  </div>
+                </div>
+                <div class="cart-table__col cart-table__col--1 cart-table__col--right">
+                  <p>72 000</p>
+                </div>
+                <div class="cart-table__col cart-table__col--1 cart-table__col--center">
+                  <button class="i-delete js-remove-product"></button>
+                </div>
+              </div>
+              <div class="cart-table__row cart-table__row--non-bordered flex-wrap">
+                <div class="cart-table__col cart-table__col--2">
+                  <p>137456789</p>
+                </div>
+                <div class="cart-table__col cart-table__col--4">
+                  <div class="cart-table__name flex">
+                    <div class="cart-table__img"><img src="img/cart/1.png" alt=""/></div>
+                    <div class="cart-table__info">
+                      <p>Аккумуляторная батарея 90D23L</p><span>FUJITO QUALITY, Япония / 42Ah / 46B19</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-table__col cart-table__col--1 cart-table__col--right">
+                  <div class="cart-table__info"><span>2 600</span>
+                    <p>2 400</p>
+                  </div>
+                </div>
+                <div class="cart-table__col cart-table__col--1"></div>
+                <div class="cart-table__col cart-table__col--2">
+                  <div class="counter">   
+                    <div class="counter__button counter__button--min"></div>
+                    <input type="text" value="30"/>
+                    <div class="counter__button counter__button--plus"></div>
+                  </div>
+                </div>
+                <div class="cart-table__col cart-table__col--1 cart-table__col--right">
+                  <p>72 000</p>
+                </div>
+                <div class="cart-table__col cart-table__col--1 cart-table__col--center">
+                  <button class="i-delete js-remove-product"></button>
+                </div>
+              </div>
+              <div class="cart-table__bottom flex-wrap aic">
+                <div class="cart-table__bottom-left"><a class="btn-black" href=""><i class="i-arrow"></i><span>Продолжить покупки</span></a></div>
+                <div class="cart__total flex aic"><span>Итого:</span>
+                  <p>160 000.00</p>
+                </div>
+                <div class="cart-table__bottom-btn"><a class="btn btn--icon btn--blue" href=""><span>Оформить </span><i class="i-more i-more-blue-dark"></i></a></div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </section>
     </div>
     <footer class="footer">

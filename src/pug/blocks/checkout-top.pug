@@ -1,0 +1,11 @@
+- var chekoutTitle = chekoutTitle
+- var chekoutTopButton
+.checkout-top
+    .container
+        include breadcrubms
+        .checkout-top__info.flex.aic.jcsb
+            h1=chekoutTitle
+            if chekoutTopButton
+                a(href="").flex.aic
+                    span Очистить корзину
+                    i.i-close

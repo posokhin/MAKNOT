@@ -36,6 +36,9 @@ h1,.h1{
 h2,.h2{
     font-size: 32px;   
     letter-spacing: 1.33px;
+    @include media(768){
+        font-size: 24px;
+    }
 }
 h3,.h3{
     font-size: 24px;  

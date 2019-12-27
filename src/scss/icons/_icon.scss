@@ -168,4 +168,22 @@ i{
         width: 23px;
         height: 20px;     
     }
+    &-triangle{
+        min-width: 48px;
+        height: 38px; 
+        &--blue{
+            background: url("img/icons/triangle-blue.svg") no-repeat center/contain;
+        }    
+        &--black{
+            background: url("img/icons/triangle-black.svg") no-repeat center/contain;
+        }    
+        &--red{
+            background: url("img/icons/triangle-red.svg") no-repeat center/contain;
+        }    
+    }
+    &-delete{
+        background: url("img/icons/delete.svg") no-repeat center/contain;
+        width: 24px;
+        height: 24px;
+    }
 }
