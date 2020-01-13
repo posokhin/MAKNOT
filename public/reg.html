@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__row flex-wrap aic">
+            <div class="header__col header__col--logo flex aic">
+              <div class="header__burger">
+                <div class="header__burger-btn"><span></span><span></span><span></span></div>
+              </div><a class="header__logo" href="/"><img src="img/logo.png" alt=""/></a>
+            </div>
+            <div class="header__col header__col--menu">
+              <ul class="menu flex aic">
+                                <li class="active menu__item"><a class="menu__link" href="">О компании</a></li>
+                                <li class=" menu__item"><a class="menu__link" href="">Продукция</a></li>
+                                <li class=" menu__item"><a class="menu__link" href="">Бренды</a></li>
+                                <li class=" menu__item"><a class="menu__link" href="">Где купить</a></li>
+                                <li class=" menu__item"><a class="menu__link" href="">Новости и акции</a></li>
+              </ul>
+            </div>
+            <div class="header__col header__col--right flex aic"><a class="header__phone header__col--right-item" href="tel:8 (800) 222-22-44">8 (800) 222-22-44</a>
+              <div class="header__search header__col--right-item js-open-search"><i class="i-Search"></i></div><a class="header__auth header__col--right-item js-auth" href=""><i class="i-user"></i></a><a class="header__cart header__col--right-item" href=""><i class="i-cart"></i></a>
+              <div class="header__lang header__col--right-item js-open-lang">
+                <div class="header__lang-current flex aic"><span>RUS</span><i class="i-arrow--down-small"></i></div>
+                <ul class="header__lang-list">
+                  <li class="header__lang-item"><a href="">EN</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="search">
+              <div class="search__logo"><a href=""><img src="img/logo.png" alt=""/></a></div>
+              <form class="search__form flex aic" action="" method="">
+                <div class="search__field flex aic">
+                  <div class="search__icon"><i class="i-Search"></i></div>
+                  <input type="text" placeholder="Что будем искать?"/>
+                </div>
+                <div class="search__controls flex aic">
+                  <button class="btn btn--orange search__btn" type="submit">Поиск</button>
+                  <div class="search__close"><i class="i-close"></i></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="m-menu">
+        <div class="m-menu__lang flex aic"><a class="active" href="">RUS</a><a href="">ENG</a></div><a class="m-menu__phone" href="tel:8 (800) 222-22-44">8 (800) 222-22-44</a>
+        <ul class="m-menu__list">
+          <li class="m-menu__item m-menu__item--bordered"><a class="m-menu__title flex aic" href="">О компании</a></li>
+          <li class="m-menu__item m-menu__item--bordered"><a class="m-menu__title flex aic" href=""> <span>Продукция</span><i class="i-menu-arrow"></i></a>
+            <ul class="m-menu__sublist">
+              <li class="m-menu__sublist-item"><a href="">Fujito Corporation</a></li>
+              <li class="m-menu__sublist-item"><a href="">Panasonic</a></li>
+              <li class="m-menu__sublist-item"><a href="">KYB</a></li>
+            </ul>
+          </li>
+          <li class="m-menu__item m-menu__item--bordered"><a class="m-menu__title flex aic" href=""><span>Бренды</span><i class="i-menu-arrow"></i></a>
+            <ul class="m-menu__sublist">
+              <li class="m-menu__sublist-item"><a href="">Fujito Corporation</a></li>
+              <li class="m-menu__sublist-item"><a href="">Panasonic</a></li>
+              <li class="m-menu__sublist-item"><a href="">KYB</a></li>
+            </ul>
+          </li>
+          <li class="m-menu__item"><a class="m-menu__title flex aic" href=""> <span>Где купить</span></a></li>
+          <li class="m-menu__item"><a class="m-menu__title flex aic" href=""> <span>Новости и акции</span></a></li>
+          <li class="m-menu__item"><a class="m-menu__title flex aic" href=""> <span>Контакты</span></a></li>
+        </ul>
+        <ul class="social m-menu__social flex aic">
+          <li class="social__item"><a href=""><i class="i-telegram"></i></a></li>
+          <li class="social__item"><a href=""><i class="i-viber"></i></a></li>
+          <li class="social__item"><a href=""><i class="i-whatsupp"></i></a></li>
+        </ul>
+        <div class="m-menu__copy">© 2019, Макнот™</div>
+      </div>
+      <section class="registration">
+        <div class="registration__left">
+          <div class="registration__left-content">
+            <div class="registration__info">
+              <h1>Регистрация пользователя</h1>
+              <p>После регистрации на сайте вам будет доступно отслеживание состояния заказов, личный кабинет и другие новые возможности.</p>
+              <div class="form__checkbox">
+                <input type="checkbox" id="check1"/>
+                <label class="flex" for="check1">
+                  <div class="form__checkbox-toggle form__checkbox-toggle--white flex aic jcc"><i class="i-check"></i></div><span>Согласие на обработку персональных данных</span>
+                </label>
+              </div>
+              <div class="form__checkbox">
+                <input type="checkbox" id="check2"/>
+                <label class="flex" for="check2">
+                  <div class="form__checkbox-toggle form__checkbox-toggle--white flex aic jcc"><i class="i-check"></i></div><span>Согласие на получение рекламных материалов по e-mail и SMS</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="registration__success">
+            <div class="registration__success-title">Спасибо за регистрацию!</div>
+            <div class="registration__success-text">
+              <p>После регистрации на сайте вам будет доступно отслеживание состояния заказов, личный кабинет и другие новые возможности.</p>
+            </div>
+            <div class="registration__success-buttons flex jcsb"><a class="btn btn--bordered btn--bordered-white" href="">Личный кабинет</a><a class="btn btn--bordered btn--bordered-white" href="">Каталог</a></div>
+          </div>
+        </div>
+        <div class="registration__right">
+          <div class="registration__form active">
+            <div class="form__item">
+              <div class="form__placeholder">Ваше ФИО</div>
+              <input type="text"/>
+            </div>
+            <div class="form__item">
+              <div class="form__placeholder">Ваш e-mail</div>
+              <input type="text"/>
+            </div>
+            <div class="form__item">
+              <div class="form__placeholder">Ваш номер телефона</div>
+              <input type="text" data-phone="data-phone"/>
+            </div>
+            <div class="form__item">
+              <div class="form__placeholder">Пароль</div>
+              <input type="text"/>
+            </div>
+            <div class="form__item">
+              <div class="form__placeholder">Подтвердите пароль</div>
+              <input type="text"/>
+            </div>
+            <div class="registration__form-bottom flex aic jcsb">
+              <button class="js-registration-next">Далее</button>
+            </div>
+          </div>
+          <div class="registration__form">
+            <div class="form__item">
+              <div class="form__placeholder">Название компании</div>
+              <input type="text"/>
+            </div>
+            <div class="field-group flex-wrap jcsb">
+              <div class="form__item">
+                <div class="form__placeholder">ИНН</div>
+                <input type="text"/>
+              </div>
+              <div class="form__item">
+                <div class="form__placeholder">КПП</div>
+                <input type="text"/>
+              </div>
+            </div>
+            <div class="form__item">
+              <div class="form__placeholder">ОГРН</div>
+              <input type="text"/>
+            </div>
+            <div class="form__item">
+              <div class="form__placeholder">Почтовый адрес</div>
+              <input type="text"/>
+            </div>
+            <div class="form__item">
+              <div class="form__placeholder">Банк</div>
+              <input type="text"/>
+            </div>
+            <div class="form__item">
+              <div class="form__placeholder">БИК</div>
+              <input type="text"/>
+            </div>
+            <div class="form__item">
+              <div class="form__placeholder">КС</div>
+              <input type="text"/>
+            </div>
+            <div class="form__item">
+              <div class="form__placeholder">РС</div>
+              <input type="text"/>
+            </div>
+            <div class="registration__form-bottom flex aic jcsb">
+              <button class="btn btn--gray js-registration-final">Сохранить</button>
+              <button class="js-registration-final">Заполнить позднее</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/imask.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

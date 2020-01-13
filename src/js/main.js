@@ -317,18 +317,18 @@ $(document).ready(function () {
     /* gallery slider end */
 
     /* counter */
-    document.querySelectorAll('.counter__button--plus').forEach(function(el){
-        el.addEventListener('click', function(){
+    document.querySelectorAll('.counter__button--plus').forEach(function (el) {
+        el.addEventListener('click', function () {
             var max = this.parentNode.querySelector('input');
             max.value++;
         });
     });
 
-    document.querySelectorAll('.counter__button--min').forEach(function(el){
-        el.addEventListener('click', function(){
+    document.querySelectorAll('.counter__button--min').forEach(function (el) {
+        el.addEventListener('click', function () {
             var min = this.parentNode.querySelector('input');
             min.value--;
-            if(min.value <= 0){
+            if (min.value <= 0) {
                 min.value = 0;
             }
         });
@@ -336,13 +336,98 @@ $(document).ready(function () {
     /* counter end */
 
     /* remove cart product */
-    document.querySelectorAll('.js-remove-product').forEach(function(el){
-        el.addEventListener('click', function(){
+    document.querySelectorAll('.js-remove-product').forEach(function (el) {
+        el.addEventListener('click', function () {
             var row = el.parentNode.parentNode;
-            $(row).fadeOut(function(){
-                row.remove(); 
+            $(row).fadeOut(function () {
+                row.remove();
             });
         });
     });
     /* remove cart product end */
+
+    /* checkout ckeckbox button */
+    $('.checkout__content-buttons-group button').on('click', function (e) {
+        e.preventDefault();
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    /* checkout ckeckbox button end */
+
+    var i = 0;
+    function stepNext(e) {
+        e.preventDefault();
+        $(this).closest('.checkout__item').find('.checkout__content').slideUp().closest('.checkout__item').removeClass('active').addClass('final').siblings().eq(i).slideDown().addClass('active');
+        $('.checkout__item.active .checkout__content').slideDown();
+        i++
+    }
+    function stepPrev(e) {
+        e.preventDefault();
+        i--;
+        $(this).closest('.checkout__item').find('.checkout__content').slideUp().closest('.checkout__item').removeClass('active').siblings().eq(i).slideDown().addClass('active');
+        $('.checkout__item.active .checkout__content').slideDown();
+    }
+    function currentStep() {
+
+    }
+    $('.checkout__item.active .checkout__content').slideDown();
+    $('.js-chekout-next').on('click', stepNext);
+    $('.js-chekout-prev').on('click', stepPrev);
+
+    /* regFrom steps */
+    $('.js-registration-next').on('click', function (e) {
+        e.preventDefault();
+        $(this).closest('.registration__form').removeClass('active').siblings().addClass('active');
+    });
+    $('.js-registration-final').on('click', function (e) {
+        e.preventDefault
+        $('.registration').addClass('success');
+    });
+    /* regFrom steps end */
+
+    /* popup auth */
+    $('.js-auth').on('click', function (e) {
+        e.preventDefault()
+        $('.popup-reset').fadeOut(function () {
+            $('.popup-auth-inner').fadeIn()
+        });
+        $('.popup-auth').fadeIn().css({
+            display: 'flex'
+        });
+    })
+    $('.popup-auth .close').on('click', function () {
+        $('.popup-auth').fadeOut();
+    })
+
+    $('.js-change-password').on('click', function (e) {
+        e.preventDefault()
+        $('.popup-auth-inner').fadeOut(function () {
+            $('.popup-reset').fadeIn();
+        });
+    })
+    /* popup auth end */
+
+    /* phone mask */
+    document.querySelectorAll('input[type="tel"]').forEach(function (el) {
+        IMask(
+            el, {
+            mask: '+{7}(000)000-00-00'
+        });
+    })
+    /* phone mask end */
+
+    /* personal */
+    $('.js-personal-edit').on('click', function (e) {
+        e.preventDefault()
+        $('.personal-data__form').removeClass('disabled').find('input').each(function () {
+            $(this).removeAttr('readonly');
+        });
+        $('.personal-data__form').find('input').eq(0).focus();
+    })
+    $('.js-personal-edit-done').on('click', function (e) {
+        e.preventDefault()
+        $('.personal-data__form').addClass('disabled').find('input').each(function () {
+            $(this).attr('readonly', 'readonly');
+        });;
+    })
+    /* personal end */
 });

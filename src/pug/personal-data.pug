@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Личный кабинет']
+- var personalTitle = personalTitle||'Личный кабинет'
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Личный кабинет
+        link(rel="stylesheet", href="style.css")
+    body.bg-white
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            section.personal
+              .personal-top
+                .container
+                  .personal-top__inner
+                    include blocks/breadcrubms.pug
+                    h1=personalTitle
+                    .personal-hello.personal-hello--top
+                      a(href="").out
+                        i.i-out
+                      .personal-hello__item
+                        span Здравствуйте,
+                        p Роман Алексеев
+                      .personal-hello__item
+                        span Ваш Статус: 
+                        p ОПТ
+              .personal-content
+                .container
+                  .personal-content__row.flex-wrap  
+                    .personal-content__left.personal-content__col
+                      .personal-hello
+                        .personal-hello__item
+                          span Здравствуйте,
+                          p Роман Алексеев
+                        .personal-hello__item
+                          span Ваш Статус: 
+                          p ОПТ
+                      ul.personal-menu
+                        li.personal-menu__item.active
+                          a(href="") Мои данные
+                        li.personal-menu__item
+                          a(href="") Мои заказы
+                        li.personal-menu__item
+                          a(href="") Моя корзина
+                      a(href="").personal__out.aic
+                        i.i-out
+                        span Выйти
+                    .personal-content__right.personal-content__col
+                        .personal-data.flex-wrap
+                          .personal-data__left.personal-data__col
+                            .personal-data__title.flex.aic.jcsb
+                              h4 Персональные данные
+                              button.i-edit.js-personal-edit
+                            form(action="").personal-data__form.disabled
+                              .form__item
+                                  .form__placeholder Фамилия Имя Отчество
+                                  input(type="text" value="Алексеев Роман Олегович" readonly)
+                              .form__item
+                                  .form__placeholder Дата рождения
+                                  input(type="text" value="28.10.1977" readonly)
+                              .form__item
+                                  .form__placeholder Телефон
+                                  input(type="tel" value="+7 (906)232-56-56" readonly data-phone)
+                              .form__item
+                                  .form__placeholder e-mail
+                                  input(type="text" value="example@mail.com" readonly)
+                              .form__item
+                                  .form__placeholder Пароль
+                                  input(type="password" value="Пароль" readonly)
+                              button.btn.btn--blue.js-personal-edit-done Сохранить 
+                          .personal-data__right.personal-data__col
+                            .personal-data__title
+                              h4 Платежные данные
+                            .personal-data__pay
+                              ul.personal-data__pay-list  
+                                li.personal-data__pay-item.flex.aic.jcsb
+                                  .personal-data__pay-title ОАО «Арканзас»
+                                  .personal-data__pay-actions.flex.aic
+                                    button.i-edit
+                                    button.i-delete  
+                                li.personal-data__pay-item.flex.aic.jcsb
+                                  .personal-data__pay-title «Пятое колесо»
+                                  .personal-data__pay-actions.flex.aic
+                                    button.i-edit
+                                    button.i-delete
+                                a(href="#").personal-data__pay-add.flex.aic
+                                  i.i-plus
+                                  span Добавить платежные данные
+
+        include templates/footer
+        include blocks/popups
+        include blocks/scripts

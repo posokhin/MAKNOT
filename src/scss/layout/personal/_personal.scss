@@ -1,0 +1,37 @@
+.personal{
+  &-content{
+    &__row{
+      margin: 0 -20px;
+      @include media(1000){
+        margin: 0;
+      }
+    }
+    &__col{
+      padding: 0 20px;
+      @include media(1000){
+        width: 100%;
+        padding: 0;
+      }
+    }
+    &__left{
+      @include col(3);
+    }
+    &__right{
+      @include col(9);   
+    }
+  }
+  &__out{
+    @include media(1000){
+      display: none;
+    }
+    display: inline-flex;
+    span{
+      margin-left: 16px;
+      font-family: Play;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.75px;
+      color: #212529;
+    }
+  }
+}

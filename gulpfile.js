@@ -1,16 +1,18 @@
-let gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    watch = require('gulp-watch'),
-    concat = require("gulp-concat"),
-    autoprefixer = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync').create(),
-    pug = require('gulp-pug'),
-    cleanCSS = require('gulp-clean-css'),
-    gcmq = require('gulp-group-css-media-queries'),
-    sassGlob = require('gulp-sass-glob'),
-    changed = require('gulp-changed');
-
-
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const concat = require("gulp-concat");
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync').create();
+const pug = require('gulp-pug');
+const cleanCSS = require('gulp-clean-css');
+const gcmq = require('gulp-group-css-media-queries');
+const sassGlob = require('gulp-sass-glob');
+const imagemin = require('gulp-imagemin');
+const tinypng = require('gulp-tinypng-unlimited');
+const svgo = require('imagemin-svgo');
+const imageminGifsicle = require('imagemin-gifsicle');
+const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+const imageminPngquant = require('imagemin-pngquant');
 
 gulp.task('sass', function () {
     return gulp.src('src/scss/**/*.scss')
@@ -24,8 +26,9 @@ gulp.task('sass', function () {
             compatibility: 'ie8',
             format: 'keep-breaks'
         })) */
+        .pipe(concat('style.css'))
         .pipe(browserSync.stream())
-        .pipe(gulp.dest('./src/css/'));
+        .pipe(gulp.dest('./public/'));
 });
 
 gulp.task('watch', function () {
@@ -34,15 +37,9 @@ gulp.task('watch', function () {
             baseDir: './public/'
         }
     });
-    gulp.watch("./src/scss/**/*scss", gulp.series('sass', 'concat'));
+    gulp.watch("./src/scss/**/*scss", gulp.series('sass'));
     gulp.watch("./src/pug/**/*.pug", gulp.series('pug'));
     gulp.watch("./src/js/*.js", gulp.series('js'));
-});
-gulp.task('concat', function () {
-    return gulp.src('./src/css/main.css')
-        .pipe(concat('style.css'))
-        .pipe(gulp.dest('./public/'))
-        .pipe(browserSync.stream())
 });
 
 /* pug */
@@ -51,7 +48,7 @@ gulp.task('pug', function () {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('public/'))
+        .pipe(gulp.dest('./public/'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -67,3 +64,4 @@ gulp.task('js', function () {
         }));
 });
 /* end js */
+

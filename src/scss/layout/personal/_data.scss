@@ -1,0 +1,104 @@
+.personal-data{
+  background: #FFFFFF;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  button{
+    background-color: transparent;
+    padding: 0;
+  }
+  &__left{
+    @include col(5);
+    background: #F8F9FA;
+  }
+  &__right{
+    @include col(7);
+  }
+  &__col{
+    padding: 38px 40px;
+  }
+  &__title{
+    margin-bottom: 32px;
+    h4{
+      margin: 0;
+    }
+  }
+  &__pay{
+    &-item{
+      background: #FFFFFF;
+      border: 1px solid #E0E0E0;
+      box-sizing: border-box;
+      padding: 32px;  
+      margin-bottom: 24px;
+    }
+    &-title{
+      font-family: Play;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: 0.666667px;
+      color: #3486C7;   
+    }
+    &-actions{
+      button{
+        &:first-child{
+          margin-right: 24px;
+          margin-top: 2px;
+        }
+      }
+    }
+    &-add{
+      @extend .personal-data__pay-item;
+      span{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.303333px;
+        color: #212529;
+        margin-left: 16px;
+      }
+    }
+  }
+  &__form{
+    .form__item{
+      input{
+        border: 1px solid #0081F0;   
+        transition: .3s;
+      }
+      .form__placeholder{
+        color: #0081F0;
+        letter-spacing: 0.478181px;
+        font-size: 12px;
+        top: -8px;
+        padding: 0 8px;
+        left: 8px;
+        background: #FFFFFF;
+      }
+    }
+    &.disabled{
+      button{
+        display: none;
+      }
+      .form__item{
+        input{
+          background-color: transparent;
+          border: 0;
+          font-family: Play;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 0.666667px;
+          color: #212529;
+          padding: 0;
+        }
+        .form__placeholder{
+          font-weight: 600;
+          font-size: 10px;
+          line-height: 16px;
+          letter-spacing: 0.216667px;
+          text-transform: uppercase;
+          color: #ADB5BD;     
+          background-color: transparent;
+          left: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

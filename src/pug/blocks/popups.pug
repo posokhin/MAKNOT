@@ -15,3 +15,33 @@
         a(href="").btn.btn--icon.btn--orange
             span Стать оптовым клиентом
             i.i-download.i-download--right
+.popup-auth
+    .popup-auth-inner
+        i.i-close.close
+        .popup-auth__row.flex-wrap
+            .popup-auth__col.popup-auth__info
+                .popup-auth__title Авторизация
+                p Если вы впервые на сайте, заполните, пожалуйста, регистрационную форму.
+                a(href="reg.html") Регистрация
+            .popup-auth__col.popup-auth__form
+                form(action="").form
+                    .form__item
+                        .form__placeholder E-mail
+                        input(type="text" )
+                    .form__item
+                        .form__placeholder Пароль
+                        input(type="text" )
+                    .popup-auth__form-buttons.flex.aic.jcsb
+                        a(href="").js-change-password Забыли пароль?
+                        button(type="submit").btn.btn--blue Вход
+    .popup-reset
+        i.i-close.close
+        .popup-reset__title Сброс пароля
+        p Пожалуйста, укажите email, который Вы использовали для входа на сайт.
+        form(action="")
+            .form__item
+                .form__placeholder E-mail
+                input(type="text" )
+            button(type="submit").btn.btn--icon.btn--blue 
+                span Отправить
+                i.i-more.i-more-blue-dark

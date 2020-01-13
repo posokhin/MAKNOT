@@ -27,7 +27,7 @@
             <div class="header__col header__col--logo flex aic">
               <div class="header__burger">
                 <div class="header__burger-btn"><span></span><span></span><span></span></div>
-              </div><a class="header__logo" href=""><img src="img/logo.png" alt=""/></a>
+              </div><a class="header__logo" href="/"><img src="img/logo.png" alt=""/></a>
             </div>
             <div class="header__col header__col--menu">
               <ul class="menu flex aic">
@@ -39,7 +39,7 @@
               </ul>
             </div>
             <div class="header__col header__col--right flex aic"><a class="header__phone header__col--right-item" href="tel:8 (800) 222-22-44">8 (800) 222-22-44</a>
-              <div class="header__search header__col--right-item js-open-search"><i class="i-Search"></i></div><a class="header__auth header__col--right-item" href=""><i class="i-user"></i></a><a class="header__cart header__col--right-item" href=""><i class="i-cart"></i></a>
+              <div class="header__search header__col--right-item js-open-search"><i class="i-Search"></i></div><a class="header__auth header__col--right-item js-auth" href=""><i class="i-user"></i></a><a class="header__cart header__col--right-item" href=""><i class="i-cart"></i></a>
               <div class="header__lang header__col--right-item js-open-lang">
                 <div class="header__lang-current flex aic"><span>RUS</span><i class="i-arrow--down-small"></i></div>
                 <ul class="header__lang-list">
@@ -239,8 +239,45 @@
         </ul><a class="btn btn--icon btn--orange" href=""><span>Стать оптовым клиентом</span><i class="i-download i-download--right"></i></a>
       </div>
     </div>
+    <div class="popup-auth">
+      <div class="popup-auth-inner"><i class="i-close close"></i>
+        <div class="popup-auth__row flex-wrap">
+          <div class="popup-auth__col popup-auth__info">
+            <div class="popup-auth__title">Авторизация</div>
+            <p>Если вы впервые на сайте, заполните, пожалуйста, регистрационную форму.</p><a href="reg.html">Регистрация</a>
+          </div>
+          <div class="popup-auth__col popup-auth__form">
+            <form class="form" action="">
+              <div class="form__item">
+                <div class="form__placeholder">E-mail</div>
+                <input type="text"/>
+              </div>
+              <div class="form__item">
+                <div class="form__placeholder">Пароль</div>
+                <input type="text"/>
+              </div>
+              <div class="popup-auth__form-buttons flex aic jcsb"><a class="js-change-password" href="">Забыли пароль?</a>
+                <button class="btn btn--blue" type="submit">Вход</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup-reset"><i class="i-close close"></i>
+        <div class="popup-reset__title">Сброс пароля</div>
+        <p>Пожалуйста, укажите email, который Вы использовали для входа на сайт.</p>
+        <form action="">
+          <div class="form__item">
+            <div class="form__placeholder">E-mail</div>
+            <input type="text"/>
+          </div>
+          <button class="btn btn--icon btn--blue" type="submit"> <span>Отправить</span><i class="i-more i-more-blue-dark"></i></button>
+        </form>
+      </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/imask.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

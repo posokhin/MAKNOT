@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Корзина']
+- var chekoutTitle = 'Заказ сформирован'
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Заказ сформирован
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            section.checkout
+                include blocks/checkout-top
+                .checkout-success
+                    .container
+                        .checkout-success__row.flex-wrap
+                            .checkout-success__col.checkout-success__col--left
+                                .checkout-success__title Ваш заказ №10 от 13.08.2018 11:33 успешно создан.
+                                .checkout-success__subtitle Номер вашей оплаты: №10/1
+                                p Вы можете следить за выполнением своего заказа в Личном кабинете сайта. 
+                                span Для входа в этот раздел вам необходимо будет ввести логин и пароль пользователя сайта. 
+                            .checkout-success__col.checkout-success__col--right
+                                span Сумма к оплате:
+                                .checkout-success__price.flex-wrap.jcsb.aic
+                                    p 160 000.00 ₽
+                                    a(href="").btn.btn--orange Перейти в кабинет
+                                p Счет  вы всегда сможете найти в Личном кабинете сайта, в информации о заказе
+        include templates/footer
+        include blocks/scripts

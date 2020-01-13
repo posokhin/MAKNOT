@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Корзина']
+- var chekoutTitle = 'Оформление заказа'
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Оформление заказа
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            section.checkout
+                include blocks/checkout-top
+                .checkout__steps
+                    .container
+                        .checkout__row.flex-wrap
+                            .checkout__col.checkout__col--list
+                                form(action="")
+                                    ul.checkout__list
+                                        li.checkout__item.active
+                                            .checkout__head.flex.aic.jcsb
+                                                .checkout__title.flex.aic
+                                                    i.i-checkout-geo
+                                                        i.i-success
+                                                    span Регион доставки
+                                                button.i-edit
+                                            .checkout__content
+                                                .checkout__content-buttons.flex-wrap.aic
+                                                    a(href="").btn.btn--bordered-blue Москва
+                                                    a(href="").btn.btn--bordered-blue Санкт-Петербург
+                                                .checkout__content-fields
+                                                    .form__item
+                                                        .form__placeholder Ваш регион
+                                                        input(type="text" name="REGION")
+                                                .checkout__content-txt
+                                                    p Выберите свой город в списке. Если вы не нашли свой город, выберите «другое местоположение», а город впишите в поле «Город».
+                                                .checkout__content-bottom.flex.aic.jcsb
+                                                    button.btn.btn--icon.btn--blue.js-chekout-next
+                                                        span Далее
+                                                        i.i-more.i-more-blue-dark
+                                        li.checkout__item
+                                            .checkout__head.flex.aic.jcsb
+                                                .checkout__title.flex.aic
+                                                    i.i-delivery
+                                                        i.i-success
+                                                    span Доставка
+                                                button.i-edit
+                                            .checkout__content
+                                                .checkout__content-buttons.flex-wrap.aic.jcsb
+                                                    .checkout__content-buttons-group
+                                                        button.btn.btn--bordered-blue.active Курьером
+                                                        button.btn.btn--bordered-blue Самовывоз (СПБ)
+                                                    .checkout__content-buttons-info
+                                                        span Стоимость:
+                                                        p 12 000.00 ₽
+                                                .checkout__content-bottom.flex.aic.jcsb
+                                                    a(href="").flex.aic.btn-back.js-chekout-prev
+                                                        i.i-arrow
+                                                        span Назад
+                                                    button.btn.btn--icon.btn--blue.js-chekout-next
+                                                        span Далее
+                                                        i.i-more.i-more-blue-dark
+                                        li.checkout__item
+                                            .checkout__head.flex.aic.jcsb
+                                                .checkout__title.flex.aic
+                                                    i.i-pay
+                                                        i.i-success
+                                                    span Оплата
+                                                button.i-edit
+                                            .checkout__content
+                                                .checkout__content-buttons.flex-wrap.aic
+                                                    .checkout__content-buttons-group
+                                                        button.btn.btn--bordered-blue.active Счет на оплату
+                                                        button.btn.btn--bordered-blue При получении
+                                                .checkout__content-bottom.flex.aic.jcsb
+                                                    a(href="").flex.aic.btn-back.js-chekout-prev
+                                                        i.i-arrow
+                                                        span Назад
+                                                    button.btn.btn--icon.btn--blue.js-chekout-next
+                                                        span Далее
+                                                        i.i-more.i-more-blue-dark  
+                                        li.checkout__item
+                                            .checkout__head.flex.aic.jcsb
+                                                .checkout__title.flex.aic
+                                                    i.i-user
+                                                        i.i-success
+                                                    span Покупатель
+                                                button.i-edit
+                                            .checkout__content
+                                                .checkout__content-fields   
+                                                    .checkout__content-fields-group.flex-wrap.aic
+                                                        .checkout__content-fields-group-item
+                                                            .filter__item
+                                                                input(type='hidden')
+                                                                .filter__item-current.flex.aic.jcsb
+                                                                    span Выберите профиль
+                                                                    i.i-arrow--blue-small
+                                                                ul.filter__item-sublist
+                                                                    li.filter__item-subitem(data-value='Санкт-Петербург') Санкт-Петербург
+                                                                    li.filter__item-subitem(data-value='Москва') Москва
+                                                                    li.filter__item-subitem(data-value='Лондон') Лондон
+                                                    .checkout__content-fields-group.flex-wrap.aic
+                                                        .checkout__content-fields-group-item
+                                                            .form__item
+                                                                .form__placeholder ИНН
+                                                                input(type="text" name="inn")
+                                                        .checkout__content-fields-group-item
+                                                            .form__item
+                                                                .form__placeholder КПП
+                                                                input(type="text" name="inn")
+                                                        .checkout__content-fields-group-item
+                                                            .form__item
+                                                                .form__placeholder ОГРН
+                                                                input(type="text" name="inn")
+                                                    .checkout__content-fields-group.flex-wrap.aic
+                                                        .checkout__content-fields-group-item.checkout__content-fields-group-item--addr
+                                                            .form__item
+                                                                .form__placeholder Почтовый адрес
+                                                                input(type="text" name="inn")
+                                                    .checkout__content-fields-group.flex-wrap.aic
+                                                        .checkout__content-fields-group-item
+                                                            .form__item
+                                                                .form__placeholder Банк
+                                                                input(type="text" name="inn")
+                                                    .checkout__content-fields-group.flex-wrap.aic
+                                                        .checkout__content-fields-group-item
+                                                            .form__item
+                                                                .form__placeholder БИК
+                                                                input(type="text" name="inn")
+                                                        .checkout__content-fields-group-item
+                                                            .form__item
+                                                                .form__placeholder КС
+                                                                input(type="text" name="inn")
+                                                        .checkout__content-fields-group-item
+                                                            .form__item
+                                                                .form__placeholder РС
+                                                                input(type="text" name="inn")
+                                                .checkout__content-bottom.flex.aic.jcsb
+                                                    button.btn.btn--icon.btn--blue
+                                                        span Оформить заказ
+                                                        i.i-more.i-more-blue-dark
+                            .checkout__col.checkout__col--info
+                                .checkout__info
+                                    .checkout__info-top.flex.jcsb
+                                        span Ваш заказ 
+                                        button.i-edit
+                                    ul.checkout__info-list
+                                        li.flex.aic.jcsb
+                                            span Товаров на:
+                                            p 180 000.00 ₽
+                                        li.flex.aic.jcsb
+                                            span Со скидкой:
+                                            p 160 000.00 ₽
+                                    .checkout__info-total.flex.aic.jcsb
+                                        span Итого:
+                                        p 160 000.00 ₽
+
+        include templates/footer
+        include blocks/scripts

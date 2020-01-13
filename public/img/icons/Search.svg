@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
-    <title>_icn / 32x32 / Search</title>
-    <desc>Created with Sketch.</desc>
-    <g id="_icn-/-32x32-/-Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="bounds" fill-rule="nonzero" x="0" y="0" width="32" height="32"></rect>
-        <path d="M15,5 C20.5228475,5 25,9.4771525 25,15 C25,17.4008955 24.1538988,19.6041735 22.7436056,21.3279248 L26.7071068,25.2928932 L25.2928932,26.7071068 L21.3279248,22.7436056 C19.6041735,24.1538988 17.4008955,25 15,25 C9.4771525,25 5,20.5228475 5,15 C5,9.4771525 9.4771525,5 15,5 Z M15,7 C10.581722,7 7,10.581722 7,15 C7,19.418278 10.581722,23 15,23 C19.418278,23 23,19.418278 23,15 C23,10.581722 19.418278,7 15,7 Z" id="Shape" fill="#212529" fill-rule="nonzero"></path>
-    </g>
-</svg>
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M0 0h32v32H0z"/><path d="M15 5c5.523 0 10 4.477 10 10 0 2.4-.846 4.604-2.256 6.328l3.963 3.965-1.414 1.414-3.965-3.963A9.959 9.959 0 0115 25C9.477 25 5 20.523 5 15S9.477 5 15 5zm0 2a8 8 0 100 16 8 8 0 000-16z" fill="#212529"/></g></svg>

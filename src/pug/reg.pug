@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+- var count = 4
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Регистрация
+        link(rel="stylesheet", href="style.css")
+    body
+        .wrapper
+            include templates/header
+            section.registration
+                .registration__left
+                    .registration__left-content
+                        .registration__info
+                            h1 Регистрация пользователя
+                            p После регистрации на сайте вам будет доступно отслеживание состояния заказов, личный кабинет и другие новые возможности.
+                            .form__checkbox
+                                input(type="checkbox" id="check1")
+                                label(for="check1").flex
+                                    .form__checkbox-toggle.form__checkbox-toggle--white.flex.aic.jcc
+                                        i.i-check
+                                    span Согласие на обработку персональных данных
+                            .form__checkbox
+                                input(type="checkbox" id="check2")
+                                label(for="check2").flex
+                                    .form__checkbox-toggle.form__checkbox-toggle--white.flex.aic.jcc
+                                        i.i-check
+                                    span Согласие на получение рекламных материалов по e-mail и SMS
+                    .registration__success
+                        .registration__success-title Спасибо за регистрацию!
+                        .registration__success-text
+                            p После регистрации на сайте вам будет доступно отслеживание состояния заказов, личный кабинет и другие новые возможности.
+                        .registration__success-buttons.flex.jcsb
+                            a(href="").btn.btn--bordered.btn--bordered-white Личный кабинет
+                            a(href="").btn.btn--bordered.btn--bordered-white Каталог
+                .registration__right
+                    .registration__form.active
+                        .form__item
+                            .form__placeholder Ваше ФИО
+                            input(type="text" )
+                        .form__item
+                            .form__placeholder Ваш e-mail
+                            input(type="text" )
+                        .form__item
+                            .form__placeholder Ваш номер телефона
+                            input(type="text"  data-phone)
+                        .form__item
+                            .form__placeholder Пароль
+                            input(type="text"  )
+                        .form__item
+                            .form__placeholder Подтвердите пароль
+                            input(type="text" )
+                        .registration__form-bottom.flex.aic.jcsb
+                            button.js-registration-next Далее
+
+                    .registration__form
+                        .form__item
+                            .form__placeholder Название компании
+                            input(type="text" )
+                        .field-group.flex-wrap.jcsb
+                            .form__item
+                                .form__placeholder ИНН
+                                input(type="text" )
+                            .form__item
+                                .form__placeholder КПП
+                                input(type="text")
+                        .form__item
+                            .form__placeholder ОГРН
+                            input(type="text"  )
+                        .form__item
+                            .form__placeholder Почтовый адрес
+                            input(type="text")
+                        .form__item
+                            .form__placeholder Банк
+                            input(type="text")
+                        .form__item
+                            .form__placeholder БИК
+                            input(type="text")
+                        .form__item
+                            .form__placeholder КС
+                            input(type="text")
+                        .form__item
+                            .form__placeholder РС
+                            input(type="text")
+                        .registration__form-bottom.flex.aic.jcsb
+                            button.btn.btn--gray.js-registration-final Сохранить
+                            button.js-registration-final Заполнить позднее
+        include blocks/scripts

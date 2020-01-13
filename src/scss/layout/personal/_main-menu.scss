@@ -1,0 +1,53 @@
+.personal__main-menu{
+  margin: 0 -20px 40px;
+  @include media(1000){
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  &-item{
+    width: 33.33%;
+    padding: 0 20px;
+    @include media(1000){
+      width: 100%;
+      padding: 0;
+      margin-bottom: 16px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    a{
+      background: #FFFFFF;
+      border: 1px solid #E0E0E0;    
+      display: block;
+      padding: 32px;
+      height: 100%;
+      @include media(1000){
+        display: flex;
+        align-items: center;
+        padding: 16px; 
+        i{
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+  &-icon{
+    margin-bottom: 72px;
+    @include media(1000){
+      margin: 0;
+    }
+  }
+  &-title{
+    font-family: "Play";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.6px;
+    color: #212529;
+    @include media(1000){
+      margin-left: 16px;
+      font-size: 14px;
+    }
+  }
+}

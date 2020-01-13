@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Личный кабинет']
+- var personalTitle = personalTitle||'Личный кабинет'
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Личный кабинет
+        link(rel="stylesheet", href="style.css")
+    body.bg-white
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            section.personal
+              .personal-top
+                .container
+                  .personal-top__inner
+                    include blocks/breadcrubms.pug
+                    h1=personalTitle
+                    .personal-hello.personal-hello--top
+                      a(href="").out
+                        i.i-out
+                      .personal-hello__item
+                        span Здравствуйте,
+                        p Роман Алексеев
+                      .personal-hello__item
+                        span Ваш Статус: 
+                        p ОПТ
+              .personal-content
+                .container
+                  .personal-content__row.flex-wrap  
+                    .personal-content__left.personal-content__col
+                      .personal-hello
+                        .personal-hello__item
+                          span Здравствуйте,
+                          p Роман Алексеев
+                        .personal-hello__item
+                          span Ваш Статус: 
+                          p ОПТ
+                      ul.personal-menu
+                        li.personal-menu__item.active
+                          a(href="") Мои данные
+                        li.personal-menu__item
+                          a(href="") Мои заказы
+                        li.personal-menu__item
+                          a(href="") Моя корзина
+                      a(href="").personal__out.aic
+                        i.i-out
+                        span Выйти
+                    .personal-content__right.personal-content__col
+                        ul.personal__main-menu.flex-wrap
+                          li.personal__main-menu-item
+                            a(href="")
+                              .personal__main-menu-icon
+                                i.i-p-user
+                              .personal__main-menu-title Персональные данные
+                          li.personal__main-menu-item
+                            a(href="")
+                              .personal__main-menu-icon
+                                i.i-p-order
+                              .personal__main-menu-title Мои заказы
+                          li.personal__main-menu-item
+                            a(href="")
+                              .personal__main-menu-icon
+                                i.i-p-cart
+                              .personal__main-menu-title Моя корзина
+                        .personal-banners.flex-wrap
+                          .personal-banner-x
+                            a(href="").inner.flex.aic
+                              .left.col
+                                h3 Наша продукция
+                                p В батареях «FQ» за счет применения высококачественных комплектующих и больших производственных объемов есть баланс улучшенных показателей по емкости, приемлемой стоимости и надежности. 
+                                .btn.btn--icon.btn--orange
+                                  span Скачать прайс
+                                  i.i-download.i-download--down
+                              .right.col
+                                img(src="img/personal/prod1.png", alt="")
+                          .personal-banner-y
+                            a(href="").inner
+                              .top
+                                img(src="img/personal/prod2.png", alt="")
+                              .bottom.flex.aic
+                                p Новые поступления масленных фильтров от партнеров “FQ”.
+                                i.i-download--white
+        include templates/footer
+        include blocks/popups
+        include blocks/scripts

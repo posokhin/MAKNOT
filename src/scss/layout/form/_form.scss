@@ -8,7 +8,7 @@
     .filter__item{
         margin-bottom: 24px;
     }
-    &__item{
+    &__item, &__checkbox{
         position: relative;
         color: #212529;
         margin-bottom: 24px;
@@ -69,6 +69,44 @@
             a{
                 text-decoration: underline;
                 color: #9B9B9B;
+            }
+        }
+    }
+    &__checkbox{
+        &-toggle{
+            min-width: 16px;
+            max-width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            &--white{
+                border: 1px solid white;
+            }
+            i{
+                display: none;
+            }
+        }
+        span{
+            margin: -5px 0 0 8px;
+            max-width: 230px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        label{
+            cursor: pointer;
+        }
+        input{
+            display: none;
+            &:checked{
+                +label{
+                    .form__checkbox-toggle{
+                        i{
+                            display: block;
+                        }
+                    }
+                }
             }
         }
     }

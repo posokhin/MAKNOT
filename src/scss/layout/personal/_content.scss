@@ -1,0 +1,8 @@
+.personal{
+  &-content{
+    transform: translateY(-100px);
+    @include media(1000){
+      transform: translateY(-34px);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.personal-hello{
+  @include media(1000){
+    display: none;
+  }
+  &--top{
+    position: relative;
+    display: none;
+    margin-top: 16px;
+    @include media(1000){
+      display: block;
+    }
+    .out{
+      position: absolute;
+      right: 0;
+      top: 8px;
+    }
+  }
+  &__item{
+    margin-bottom: 64px;
+    @include media(1000){
+      margin-bottom: 16px;
+    }
+    span{
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.66px;
+      text-transform: uppercase;
+      color: #ADB5BD;   
+      @include media(768){
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 0.55px;
+      }
+    }
+    p{
+      font-family: $play;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 1.08333px;
+      color: #3486C7;
+      margin: 4px 0 0;
+      @include media(768){
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.75px;
+      }
+    }
+  }
+}

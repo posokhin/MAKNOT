@@ -1,0 +1,41 @@
+.popup-reset{
+  display: none;
+  position: relative;
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  max-width: 440px;
+  margin: auto;
+  padding: 64px 80px;
+  @include media(460){
+    max-width: 95%;
+    padding: 32px;
+  }
+  .close{
+    opacity: 0.4 !important;
+    &::before,&::after{
+      background: #000 !important;
+    }
+  }
+  &__title{
+    color: #000000;
+    font-family: $play;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 24px;    
+    margin-bottom: 16px;
+  }
+  p{
+    font-family: "IBM Plex Sans";
+    font-size: 12px;
+    letter-spacing: 0.5px;  
+    line-height: normal;
+    margin-bottom: 32px;
+  }
+  form{
+    button{
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}

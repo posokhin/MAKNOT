@@ -1,4 +1,10 @@
 @import './_icomoon';
+$iconPath: 'img/icons/';
+
+@mixin icon($name) {
+    background: url($iconPath+$name+'.svg') no-repeat center/contain;
+}
+
 i{
     display: inline-flex;
     transition: .3s;
@@ -111,6 +117,11 @@ i{
         &--right{
             transform: rotate(-90deg);
         }
+        &--white{
+            @include icon('i-download-white');
+            width: 25px;
+            height: 25px;
+        }
     }
     &-more{
         background: url("img/icons/i-more.svg") no-repeat center/contain;
@@ -183,6 +194,61 @@ i{
     }
     &-delete{
         background: url("img/icons/delete.svg") no-repeat center/contain;
+        width: 24px;
+        height: 24px;
+    }
+    &-checkout{
+        &-geo{
+            background: url("img/icons/i-checkout-geo.svg") no-repeat center/contain;
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &-edit{
+        font-size: 24px;
+    }
+    &-delivery{
+        background: url("img/icons/delivery.svg") no-repeat center/contain;
+        width: 32px;
+        height: 32px;     
+    }
+    &-pay{
+        background: url("img/icons/pay.svg") no-repeat center/contain;
+        width: 32px;
+        height: 32px;     
+    }
+    &-success{
+        background: url("img/icons/success.svg") no-repeat center/contain;
+        width: 16px;
+        height: 16px;    
+    }
+    &-check{
+        background: url("img/icons/i-check.svg") no-repeat center/contain;
+        width: 13px;
+        height: 10px;       
+    }
+    &-out{
+        @include icon('out');
+        width: 24px;
+        height: 24px;
+    }
+    &-p-user{
+        @include icon('p-user');
+        width: 48px;
+        height: 48px;
+    }
+    &-p-order{
+        @include icon('p-order');
+        width: 48px;
+        height: 48px;
+    }
+    &-p-cart{
+        @include icon('p-cart');
+        width: 48px;
+        height: 48px;
+    }
+    &-plus{
+        @include icon('plus');
         width: 24px;
         height: 24px;
     }

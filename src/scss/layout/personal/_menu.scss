@@ -1,0 +1,56 @@
+.personal-menu{
+  margin-bottom: 24px;
+  @include media(1000){
+    display: none;
+  }
+  &__item{
+    position: relative;
+    &.active{
+      a{
+        color: #0081F0;
+        &::before{
+          content: "";
+          display: block;
+          width: 4px;
+          height: 22px;
+          background: #0081F0;
+          margin-right: 16px;
+        }  
+      }
+    }
+    &::before{
+      position: absolute;
+      content: "";
+      width: 80px;
+      height: 1px;
+      background: #E0E0E0;
+      top: 0;
+      left: 0;
+    }
+    &:last-child{
+      &::after{
+        position: absolute;
+        content: "";
+        width: 80px;
+        height: 1px;
+        background: #E0E0E0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    a{
+      display: flex;
+      padding: 24px 0;
+      position: relative;
+      font-family: $play;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.75px;
+      color: #212529;
+      transition: .3s;
+      &:hover{
+        color: #0081F0;
+      }
+    }
+  }
+}

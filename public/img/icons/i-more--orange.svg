@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
-    <title>_icn / 24x24 / more copy 2</title>
-    <desc>Created with Sketch.</desc>
-    <g id="_icn-/-24x24-/-more-copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-2" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) ">
-            <circle id="Oval" fill="#FF5A00" cx="12" cy="12" r="12"></circle>
-            <path d="M9.5547002,14.1679497 C9.09517151,13.8615972 8.47430216,13.9857711 8.16794971,14.4452998 C7.86159725,14.9048285 7.98577112,15.5256978 8.4452998,15.8320503 L12,18.2018504 L15.5547002,15.8320503 C16.0142289,15.5256978 16.1384028,14.9048285 15.8320503,14.4452998 C15.5256978,13.9857711 14.9048285,13.8615972 14.4452998,14.1679497 L12,15.7981496 L9.5547002,14.1679497 Z" id="Path" fill="#FBFBFB" fill-rule="nonzero"></path>
-            <path d="M13,17 L13,7 C13,6.44771525 12.5522847,6 12,6 C11.4477153,6 11,6.44771525 11,7 L11,17 C11,17.5522847 11.4477153,18 12,18 C12.5522847,18 13,17.5522847 13,17 Z" id="Path-2" fill="#FBFBFB" fill-rule="nonzero"></path>
-        </g>
-    </g>
-</svg>
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(-90 12 12)" fill="none" fill-rule="evenodd"><circle fill="#FF5A00" cx="12" cy="12" r="12"/><path d="M9.555 14.168a1 1 0 10-1.11 1.664L12 18.202l3.555-2.37a1 1 0 10-1.11-1.664L12 15.798l-2.445-1.63z" fill="#FBFBFB" fill-rule="nonzero"/><path d="M13 17V7a1 1 0 00-2 0v10a1 1 0 002 0z" fill="#FBFBFB" fill-rule="nonzero"/></g></svg>
