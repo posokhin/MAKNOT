@@ -430,4 +430,190 @@ $(document).ready(function () {
         });;
     })
     /* personal end */
+
+    /* personal pay-data */
+    var vm = new Vue({
+        el: '.personal-data__pay',
+        data: {
+            addCompany: [
+                {
+                    name: 'Название компании',
+                    value: ''
+                },
+                {
+                    name: 'ИНН',
+                    value: ''
+                },
+                {
+                    name: 'КПП',
+                    value: ''
+                },
+                {
+                    name: 'ОГРН',
+                    value: ''
+                },
+                {
+                    name: 'Почтовый адрес',
+                    value: ''
+                },
+                {
+                    name: 'Банк',
+                    value: ''
+                },
+                {
+                    name: 'БИК',
+                    value: ''
+                },
+                {
+                    name: 'КС',
+                    value: ''
+                },
+                {
+                    name: 'РС',
+                    value: ''
+                }
+            ],
+            companies: [
+                [
+                    {
+                        name: 'Название компании',
+                        value: 'ОАО «Арканзас»'
+                    },
+                    {
+                        name: 'ИНН',
+                        value: 123
+                    },
+                    {
+                        name: 'КПП',
+                        value: 1234
+                    },
+                    {
+                        name: 'ОГРН',
+                        value: 12345
+                    },
+                    {
+                        name: 'Почтовый адрес',
+                        value: 'Санкт-Петербург'
+                    },
+                    {
+                        name: 'Банк',
+                        value: 'ВТБ'
+                    },
+                    {
+                        name: 'БИК',
+                        value: 850
+                    },
+                    {
+                        name: 'КС',
+                        value: 988
+                    },
+                    {
+                        name: 'РС',
+                        value: 111
+                    }
+                ],
+                [
+                    {
+                        name: 'Название компании',
+                        value: '«Пятое колесо»'
+                    },
+                    {
+                        name: 'ИНН',
+                        value: 123
+                    },
+                    {
+                        name: 'КПП',
+                        value: 1234
+                    },
+                    {
+                        name: 'ОГРН',
+                        value: 12345
+                    },
+                    {
+                        name: 'Почтовый адрес',
+                        value: 'Санкт-Петербург'
+                    },
+                    {
+                        name: 'Банк',
+                        value: 'ВТБ'
+                    },
+                    {
+                        name: 'БИК',
+                        value: 850
+                    },
+                    {
+                        name: 'КС',
+                        value: 988
+                    },
+                    {
+                        name: 'РС',
+                        value: 111
+                    }
+                ]
+            ],
+        },
+        methods: {
+            dataAddEdit: function (value) {
+                event.target.closest('.personal-data__pay-list').classList.add('add');
+                event.target.closest('.personal-data__add').classList.add('active');
+            },
+            dataAdd: function (e) {
+                e.preventDefault()
+                this.companies.push(this.addCompany);
+                this.addCompany = [
+                    {
+                        name: 'Название компании',
+                        value: ''
+                    },
+                    {
+                        name: 'ИНН',
+                        value: ''
+                    },
+                    {
+                        name: 'КПП',
+                        value: ''
+                    },
+                    {
+                        name: 'ОГРН',
+                        value: ''
+                    },
+                    {
+                        name: 'Почтовый адрес',
+                        value: ''
+                    },
+                    {
+                        name: 'Банк',
+                        value: ''
+                    },
+                    {
+                        name: 'БИК',
+                        value: ''
+                    },
+                    {
+                        name: 'КС',
+                        value: ''
+                    },
+                    {
+                        name: 'РС',
+                        value: ''
+                    }
+                ]
+                event.target.closest('.personal-data__pay-list').classList.remove('add');
+                event.target.closest('.personal-data__add').classList.remove('active');
+            },
+            dataEdit: function () {
+                event.target.closest('.personal-data__pay-item').classList.add('active');
+                event.target.closest('.personal-data__pay-list').classList.add('edit');
+            },
+            dataSave: function (e) {
+                e.preventDefault()
+                event.target.closest('.personal-data__pay-item').classList.remove('active');
+                event.target.closest('.personal-data__pay-list').classList.remove('edit');
+            },
+            deleteData: function (index) {
+                this.companies.splice(index, 1);
+            },
+        },
+    });
+    /* personal pay-data end */
 });

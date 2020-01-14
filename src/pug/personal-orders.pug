@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+- var breadItems = ['Главная', 'Личный кабинет']
+- var personalTitle = personalTitle||'Личный кабинет'
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Личный кабинет
+        link(rel="stylesheet", href="style.css")
+    body.bg-white.personal-data-page
+        .wrapper
+            include blocks/top-banner
+            include templates/header
+            section.personal
+              .personal-top
+                .container
+                  .personal-top__inner
+                    include blocks/breadcrubms.pug
+                    a(href="").back-to-data.flex.aic
+                      i.i-arrow-sm-left
+                      i.i-p-order.back-to-data__icon
+                      span Мои заказы
+                    h1=personalTitle
+                    .personal-hello.personal-hello--top
+                      a(href="").out
+                        i.i-out
+                      .personal-hello__item
+                        span Здравствуйте,
+                        p Роман Алексеев
+                      .personal-hello__item
+                        span Ваш Статус: 
+                        p ОПТ
+              .personal-content
+                .container
+                  .personal-content__row.flex-wrap  
+                    .personal-content__left.personal-content__col
+                      .personal-hello
+                        .personal-hello__item
+                          span Здравствуйте,
+                          p Роман Алексеев
+                        .personal-hello__item
+                          span Ваш Статус: 
+                          p ОПТ
+                      ul.personal-menu
+                        li.personal-menu__item.active
+                          a(href="") Мои данные
+                        li.personal-menu__item
+                          a(href="") Мои заказы
+                        li.personal-menu__item
+                          a(href="") Моя корзина
+                      a(href="").personal__out.aic
+                        i.i-out
+                        span Выйти
+                    .personal-content__right.personal-content__col
+                        .personal-orders
+                          ul.personal-orders__head.flex
+                            li.personal-orders__head-item Номер заказа
+                            li.personal-orders__head-item Дата
+                            li.personal-orders__head-item Сумма, ₽
+                            li.personal-orders__head-item Статус
+                            li.personal-orders__head-item Счет
+                            li.personal-orders__head-item 
+                          ul.personal-orders__list
+                            -for(let i = 0; i < 9; i+=1)
+                              li.personal-orders__item
+                                ul.flex-wrap.aic
+                                  li.flex.aic
+                                    button.i-plus.i-plus--blue
+                                    span HBB17161
+                                  li
+                                    span 19-11-2017
+                                  li
+                                    span 3025.00
+                                  li
+                                    span Отправлен
+                                  li
+                                    a(href="#").pdf 1421324.pdf
+                                  li
+                                    a(href="#") Повторить
+        include templates/footer
+        include blocks/popups
+        include blocks/scripts

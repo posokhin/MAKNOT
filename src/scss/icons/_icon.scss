@@ -251,5 +251,13 @@ i{
         @include icon('plus');
         width: 24px;
         height: 24px;
+        &--blue{
+            @include icon('plus-blue');
+        }
+    }
+    &-telegram-fix{
+        @include icon('telegram');
+        width: 41px;
+        height: 41px;
     }
 }

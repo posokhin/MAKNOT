@@ -8,7 +8,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Личный кабинет
         link(rel="stylesheet", href="style.css")
-    body.bg-white
+    body.bg-white.personal-data-page
         .wrapper
             include blocks/top-banner
             include templates/header
@@ -17,6 +17,10 @@ html(lang="en")
                 .container
                   .personal-top__inner
                     include blocks/breadcrubms.pug
+                    a(href="").back-to-data.flex.aic
+                      i.i-arrow-sm-left
+                      i.i-p-user.back-to-data__icon
+                      span Персональные данные
                     h1=personalTitle
                     .personal-hello.personal-hello--top
                       a(href="").out
@@ -75,21 +79,26 @@ html(lang="en")
                             .personal-data__title
                               h4 Платежные данные
                             .personal-data__pay
-                              ul.personal-data__pay-list  
-                                li.personal-data__pay-item.flex.aic.jcsb
-                                  .personal-data__pay-title ОАО «Арканзас»
+                              ul.personal-data__pay-list
+                                li.personal-data__pay-item.flex.aic.jcsb(v-for="(item, index) in companies" :key="index")
+                                  .personal-data__pay-title(@click="dataEdit") {{ item[0].value }}
                                   .personal-data__pay-actions.flex.aic
-                                    button.i-edit
-                                    button.i-delete  
-                                li.personal-data__pay-item.flex.aic.jcsb
-                                  .personal-data__pay-title «Пятое колесо»
-                                  .personal-data__pay-actions.flex.aic
-                                    button.i-edit
-                                    button.i-delete
-                                a(href="#").personal-data__pay-add.flex.aic
-                                  i.i-plus
-                                  span Добавить платежные данные
-
+                                    button.i-edit(@click="dataEdit")
+                                    button.i-delete( @click="deleteData(index)" )
+                                  form(action="").personal-data__pay-form
+                                    .form__item(v-for="(field, index) in item" :key="index")
+                                        .form__placeholder {{field.name}}
+                                        input(type="text" value="" v-model="field.value")
+                                    button.btn.btn--blue(@click="dataSave") Сохранить 
+                                li.personal-data__add
+                                  a(href="#" @click="dataAddEdit").personal-data__pay-add.flex.aic
+                                    i.i-plus
+                                    span Добавить платежные данные
+                                  form(action="").personal-data__pay-form
+                                    .form__item(v-for="(field,index) in addCompany" :key="index")
+                                        .form__placeholder {{field.name}}
+                                        input(type="text" value="" v-model="field.value")
+                                    button.btn.btn--blue(@click="dataAdd") Добавить
         include templates/footer
         include blocks/popups
         include blocks/scripts

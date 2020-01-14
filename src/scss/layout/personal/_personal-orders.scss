@@ -1,0 +1,66 @@
+.personal-orders{
+  background: #FFFFFF;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); 
+  padding: 24px 40px 40px;
+  @include media(768){
+    padding-left: 56px;
+    padding-right: 24px;
+  }
+  &__head{
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(230, 231, 232, 0.6);
+    @include media(768){
+      display: none;
+    }
+    &-item{
+      @include col(2);
+      padding-right: 5px;
+      &:last-child{
+        padding-right: 0;
+      }
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 16px;
+      letter-spacing: 0.216667px;
+      text-transform: uppercase;
+      color: #ADB5BD;
+    }
+  }
+  &__item{
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(230, 231, 232, 0.6);
+    ul{
+      li{
+        @extend .personal-orders__head-item;
+        font-family: Play;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #495057;
+        text-transform: none;
+        position: relative;
+        @include media(768){
+          width: 50%;
+          margin-bottom: 8px;
+        }
+        button{
+          margin-right: 16px;
+          padding: 0;
+          @include media(768){
+            position: absolute;
+            left: -32px;
+            top: 50%;
+            transform: translateY(50%);
+          }
+        }
+        a{
+          color: #0081F0;
+          &.pdf{
+            color: #495057;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,13 @@
 .personal-data{
   background: #FFFFFF;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  &-page{
+    @include media(1000){
+      .personal-hello--top, .personal-top h1{
+        display: none;
+      }
+    }
+  }
   button{
     background-color: transparent;
     padding: 0;
@@ -11,23 +18,65 @@
   }
   &__right{
     @include col(7);
+    @include media(768){
+      order: -1;
+    }
   }
   &__col{
     padding: 38px 40px;
+    @include media(768){
+      width: 100%;
+      padding: 24px;
+    }
   }
   &__title{
     margin-bottom: 32px;
+    @include media(768){
+      margin-bottom: 16px;
+    }
     h4{
       margin: 0;
+      @include media(768){
+        font-size: 16px;
+      }
     }
   }
   &__pay{
+    &-list{
+      &.edit{
+        .personal-data__pay-item{
+          display: none;
+        }
+        .personal-data__pay-item{
+          &.active{
+            display: block;
+            padding: 0;
+            border: 0;
+            .personal-data__pay-title, .personal-data__pay-actions{
+              display: none;
+            }
+            .personal-data__pay-form{
+              display: block;
+            }
+          }
+        }
+      }
+      &.add{
+        .personal-data__pay-item{
+          display: none;
+        }
+      }
+    }
     &-item{
       background: #FFFFFF;
       border: 1px solid #E0E0E0;
       box-sizing: border-box;
       padding: 32px;  
       margin-bottom: 24px;
+      @include media(768){
+        padding: 16px;
+        margin-bottom: 16px;
+      }
     }
     &-title{
       font-family: Play;
@@ -35,17 +84,24 @@
       font-size: 16px;
       letter-spacing: 0.666667px;
       color: #3486C7;   
+      @include media(768){
+        font-size: 14px;
+      }
     }
     &-actions{
       button{
         &:first-child{
           margin-right: 24px;
           margin-top: 2px;
+          @include media(768){
+            margin-right: 16px;
+          }
         }
       }
     }
     &-add{
       @extend .personal-data__pay-item;
+      margin-bottom: 0 !important;
       span{
         font-weight: 600;
         font-size: 14px;
@@ -53,10 +109,50 @@
         letter-spacing: 0.303333px;
         color: #212529;
         margin-left: 16px;
+        @include media(768){
+          font-size: 12px;
+          margin-left: 8px;
+        }
+      }
+    }
+    &-form{
+      display: none;
+      width: 100%;
+      .form-group{
+        .form__item{
+          width: 48%;
+        }
+      }
+      .form__item{
+        input{
+          border: 1px solid #0081F0;
+        }
+        .form__placeholder {
+          color: #0081F0;
+          letter-spacing: 0.478181px;
+          font-size: 12px;
+          top: -8px;
+          padding: 0 8px;
+          left: 8px;
+          background: #FFFFFF;
+        }
+      }
+    }
+  }
+  &__add{
+    &.active{
+      a{
+        display: none;
+      }
+      form{
+        display: block;
       }
     }
   }
   &__form{
+    @include media(768){
+      padding-top: 4px;
+    }
     .form__item{
       input{
         border: 1px solid #0081F0;   
@@ -100,5 +196,30 @@
         }
       }
     }
+  }
+}
+.back-to-data{
+  display: none;
+  padding: 32px 0;
+  @include media(1000){
+    display: inline-flex;
+  }
+  .i-arrow-sm-left{
+    font-size: 20px;
+    color: #00ACFF;
+    margin-right: 8px;
+  }
+  &__icon{
+    width: 32px;
+    height: 32px;
+  }
+  span{
+    font-family: Play;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.583333px;
+    color: #212529;
+    margin-left: 16px;
   }
 }

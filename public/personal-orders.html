@@ -101,7 +101,7 @@
                   <li class="breadcrubms__item"><a href="">Главная</a></li>
                   <li class="breadcrubms__item"><a href="">Личный кабинет</a></li>
                 </ul>
-              </div><a class="back-to-data flex aic" href=""><i class="i-arrow-sm-left"></i><i class="i-p-user back-to-data__icon"></i><span>Персональные данные</span></a>
+              </div><a class="back-to-data flex aic" href=""><i class="i-arrow-sm-left"></i><i class="i-p-order back-to-data__icon"></i><span>Мои заказы</span></a>
               <h1>Личный кабинет</h1>
               <div class="personal-hello personal-hello--top"><a class="out" href=""><i class="i-out"></i></a>
                 <div class="personal-hello__item"><span>Здравствуйте,</span>
@@ -133,68 +133,125 @@
                 </ul><a class="personal__out aic" href=""><i class="i-out"></i><span>Выйти</span></a>
               </div>
               <div class="personal-content__right personal-content__col">
-                <div class="personal-data flex-wrap">
-                  <div class="personal-data__left personal-data__col">
-                    <div class="personal-data__title flex aic jcsb">
-                      <h4>Персональные данные</h4>
-                      <button class="i-edit js-personal-edit"></button>
-                    </div>
-                    <form class="personal-data__form disabled" action="">
-                      <div class="form__item">
-                        <div class="form__placeholder">Фамилия Имя Отчество</div>
-                        <input type="text" value="Алексеев Роман Олегович" readonly="readonly"/>
-                      </div>
-                      <div class="form__item">
-                        <div class="form__placeholder">Дата рождения</div>
-                        <input type="text" value="28.10.1977" readonly="readonly"/>
-                      </div>
-                      <div class="form__item">
-                        <div class="form__placeholder">Телефон</div>
-                        <input type="tel" value="+7 (906)232-56-56" readonly="readonly" data-phone="data-phone"/>
-                      </div>
-                      <div class="form__item">
-                        <div class="form__placeholder">e-mail</div>
-                        <input type="text" value="example@mail.com" readonly="readonly"/>
-                      </div>
-                      <div class="form__item">
-                        <div class="form__placeholder">Пароль</div>
-                        <input type="password" value="Пароль" readonly="readonly"/>
-                      </div>
-                      <button class="btn btn--blue js-personal-edit-done">Сохранить </button>
-                    </form>
-                  </div>
-                  <div class="personal-data__right personal-data__col">
-                    <div class="personal-data__title">
-                      <h4>Платежные данные</h4>
-                    </div>
-                    <div class="personal-data__pay">
-                      <ul class="personal-data__pay-list">
-                        <li class="personal-data__pay-item flex aic jcsb" v-for="(item, index) in companies" :key="index">
-                          <div class="personal-data__pay-title" @click="dataEdit">{{ item[0].value }}</div>
-                          <div class="personal-data__pay-actions flex aic">
-                            <button class="i-edit" @click="dataEdit"></button>
-                            <button class="i-delete" @click="deleteData(index)"></button>
-                          </div>
-                          <form class="personal-data__pay-form" action="">
-                            <div class="form__item" v-for="(field, index) in item" :key="index">
-                              <div class="form__placeholder">{{field.name}}</div>
-                              <input type="text" value="" v-model="field.value"/>
-                            </div>
-                            <button class="btn btn--blue" @click="dataSave">Сохранить </button>
-                          </form>
+                <div class="personal-orders">
+                  <ul class="personal-orders__head flex">
+                    <li class="personal-orders__head-item">Номер заказа</li>
+                    <li class="personal-orders__head-item">Дата</li>
+                    <li class="personal-orders__head-item">Сумма, ₽</li>
+                    <li class="personal-orders__head-item">Статус</li>
+                    <li class="personal-orders__head-item">Счет</li>
+                    <li class="personal-orders__head-item"> </li>
+                  </ul>
+                  <ul class="personal-orders__list">
+                    <li class="personal-orders__item">
+                      <ul class="flex-wrap aic">
+                        <li class="flex aic">
+                          <button class="i-plus i-plus--blue"></button><span>HBB17161</span>
                         </li>
-                        <li class="personal-data__add"><a class="personal-data__pay-add flex aic" href="#" @click="dataAddEdit"><i class="i-plus"></i><span>Добавить платежные данные</span></a>
-                          <form class="personal-data__pay-form" action="">
-                            <div class="form__item" v-for="(field,index) in addCompany" :key="index">
-                              <div class="form__placeholder">{{field.name}}</div>
-                              <input type="text" value="" v-model="field.value"/>
-                            </div>
-                            <button class="btn btn--blue" @click="dataAdd">Добавить</button>
-                          </form>
-                        </li>
+                        <li><span>19-11-2017</span></li>
+                        <li><span>3025.00</span></li>
+                        <li><span>Отправлен</span></li>
+                        <li><a class="pdf" href="#">1421324.pdf</a></li>
+                        <li><a href="#">Повторить</a></li>
                       </ul>
-                    </div>
-                  </div>
+                    </li>
+                    <li class="personal-orders__item">
+                      <ul class="flex-wrap aic">
+                        <li class="flex aic">
+                          <button class="i-plus i-plus--blue"></button><span>HBB17161</span>
+                        </li>
+                        <li><span>19-11-2017</span></li>
+                        <li><span>3025.00</span></li>
+                        <li><span>Отправлен</span></li>
+                        <li><a class="pdf" href="#">1421324.pdf</a></li>
+                        <li><a href="#">Повторить</a></li>
+                      </ul>
+                    </li>
+                    <li class="personal-orders__item">
+                      <ul class="flex-wrap aic">
+                        <li class="flex aic">
+                          <button class="i-plus i-plus--blue"></button><span>HBB17161</span>
+                        </li>
+                        <li><span>19-11-2017</span></li>
+                        <li><span>3025.00</span></li>
+                        <li><span>Отправлен</span></li>
+                        <li><a class="pdf" href="#">1421324.pdf</a></li>
+                        <li><a href="#">Повторить</a></li>
+                      </ul>
+                    </li>
+                    <li class="personal-orders__item">
+                      <ul class="flex-wrap aic">
+                        <li class="flex aic">
+                          <button class="i-plus i-plus--blue"></button><span>HBB17161</span>
+                        </li>
+                        <li><span>19-11-2017</span></li>
+                        <li><span>3025.00</span></li>
+                        <li><span>Отправлен</span></li>
+                        <li><a class="pdf" href="#">1421324.pdf</a></li>
+                        <li><a href="#">Повторить</a></li>
+                      </ul>
+                    </li>
+                    <li class="personal-orders__item">
+                      <ul class="flex-wrap aic">
+                        <li class="flex aic">
+                          <button class="i-plus i-plus--blue"></button><span>HBB17161</span>
+                        </li>
+                        <li><span>19-11-2017</span></li>
+                        <li><span>3025.00</span></li>
+                        <li><span>Отправлен</span></li>
+                        <li><a class="pdf" href="#">1421324.pdf</a></li>
+                        <li><a href="#">Повторить</a></li>
+                      </ul>
+                    </li>
+                    <li class="personal-orders__item">
+                      <ul class="flex-wrap aic">
+                        <li class="flex aic">
+                          <button class="i-plus i-plus--blue"></button><span>HBB17161</span>
+                        </li>
+                        <li><span>19-11-2017</span></li>
+                        <li><span>3025.00</span></li>
+                        <li><span>Отправлен</span></li>
+                        <li><a class="pdf" href="#">1421324.pdf</a></li>
+                        <li><a href="#">Повторить</a></li>
+                      </ul>
+                    </li>
+                    <li class="personal-orders__item">
+                      <ul class="flex-wrap aic">
+                        <li class="flex aic">
+                          <button class="i-plus i-plus--blue"></button><span>HBB17161</span>
+                        </li>
+                        <li><span>19-11-2017</span></li>
+                        <li><span>3025.00</span></li>
+                        <li><span>Отправлен</span></li>
+                        <li><a class="pdf" href="#">1421324.pdf</a></li>
+                        <li><a href="#">Повторить</a></li>
+                      </ul>
+                    </li>
+                    <li class="personal-orders__item">
+                      <ul class="flex-wrap aic">
+                        <li class="flex aic">
+                          <button class="i-plus i-plus--blue"></button><span>HBB17161</span>
+                        </li>
+                        <li><span>19-11-2017</span></li>
+                        <li><span>3025.00</span></li>
+                        <li><span>Отправлен</span></li>
+                        <li><a class="pdf" href="#">1421324.pdf</a></li>
+                        <li><a href="#">Повторить</a></li>
+                      </ul>
+                    </li>
+                    <li class="personal-orders__item">
+                      <ul class="flex-wrap aic">
+                        <li class="flex aic">
+                          <button class="i-plus i-plus--blue"></button><span>HBB17161</span>
+                        </li>
+                        <li><span>19-11-2017</span></li>
+                        <li><span>3025.00</span></li>
+                        <li><span>Отправлен</span></li>
+                        <li><a class="pdf" href="#">1421324.pdf</a></li>
+                        <li><a href="#">Повторить</a></li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

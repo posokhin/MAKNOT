@@ -65,3 +65,22 @@ gulp.task('js', function () {
 });
 /* end js */
 
+
+/* build */
+gulp.task('buildStyle', function () {
+    return gulp.src('src/scss/**/*.scss')
+        .pipe(sassGlob())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            cascade: false
+        }))
+        .pipe(gcmq())
+        .pipe(cleanCSS({
+            compatibility: 'ie8',
+            format: 'keep-breaks'
+        }))
+        .pipe(concat('style.css'))
+        .pipe(browserSync.stream())
+        .pipe(gulp.dest('./public/'));
+});
+/* build end */
