@@ -2,6 +2,17 @@
     background-color: #f8f9fa;
     position: relative;
     padding: 50px 0;
+    @include media(599) {
+        padding: 0;
+        height: 300px;
+        .container, .block-main__row, .block-main__col--slider, .block-main__slider-content{
+            height: 100%;
+        }
+        .block-main__slider-item img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
     &::after{
         display: block;
         position: absolute;
@@ -45,11 +56,22 @@
             }
         }
         &-content{
-            @include col(6);
-            padding: 0 20px;
-            @include media(768){
+            // @include col(6);
+            // padding: 0 20px;
+            /* @include media(768){
                 display: none;
-            }
+            } */
+        }
+    }
+}
+.swiper-pagination{
+    &-bullet{
+        width: 12px;
+        height: 12px;
+        background: #FFFFFF;
+        opacity: 1;
+        &-active{
+            background: #FF5A00;
         }
     }
 }

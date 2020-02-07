@@ -86,14 +86,22 @@ $(document).ready(function () {
 
     var sliderMain = new Swiper('.js-slider-main', {
         speed: 1000,
-        direction: 'vertical',
-        allowTouchMove: false,
+        // direction: 'vertical',
+        // allowTouchMove: false,
         loop: true,
-        navigation: {
+        /* navigation: {
             nextEl: '.block-main__slider-pagination-next',
             prevEl: '.block-main__slider-pagination-prev',
+        }, */
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
         },
-        on: {
+        autoplay: {
+            delay: 5000,
+        },
+        /* on: {
             slideChangeTransitionStart: function () {
                 $('.block-main__slider-item img').removeClass('fadeIn');
                 $('.block-main__slider-item.swiper-slide-active img').addClass('animated fadeIn');
@@ -101,7 +109,7 @@ $(document).ready(function () {
                 animateLine();
                 changeBackgroundSlider();
             },
-        }
+        } */
     });
 
     var sliderMainInfo = new Swiper('.js-slider-main-info', {
@@ -616,4 +624,60 @@ $(document).ready(function () {
         },
     });
     /* personal pay-data end */
+
+    /* geo & lang & catalog-list */
+    $('.header__geo-current').on('mousemove', function() {
+        $(this).parent().addClass('open');
+        $(this).siblings().slideDown(300);
+    });
+    $('.header__geo').on('mouseleave', function() {
+        $(this).removeClass('open');
+        $(this).find('.header__geo-list').slideUp(300);
+    });
+
+    /* $(document).on('click', function() {
+        $('.header__geo').removeClass('open');
+        $('.header__lang-current, .header__catalog-toggle, .header__catalog-toggle i').removeClass('active');
+        $('.header__geo-list, .header__lang-list, .header__catalog-list').hide();
+    }) */
+    
+    $('.header__lang-current').on('mousemove', function() {
+        $(this).addClass('active').siblings('.header__lang-list').slideDown(300);
+    });
+    $('.header__lang').on('mouseleave', function(e) {
+        $(this).find('.header__lang-current').removeClass('active').siblings('.header__lang-list').slideUp(300);
+    });
+
+    $('.header__catalog-toggle').on('mousemove', function(e) {
+        e.stopPropagation();
+        $(this).addClass('active').siblings('.header__catalog-list').slideDown(300);
+        $(this).find('i').addClass('active'); 
+    });
+    $('.header__catalog').on('mouseleave', function(e) {
+        e.stopPropagation();
+        $(this).find('.header__catalog-toggle').removeClass('active').siblings('.header__catalog-list').slideUp(300);
+        $(this).find('i').removeClass('active'); 
+    });
+
+    $('.header__catalog-list li a').hover(
+        function() {
+            $(this).find('i').addClass('active');
+        },
+        function() {
+            $(this).find('i').removeClass('active');
+        }
+    )
+    /* geo & lang & catalog-list end */
+
+
+    /* m-menu new */
+    $('.m-menu__geo').on('click', function(e) {
+        e.stopPropagation();
+        $(this).toggleClass('active').find('.m-menu__geo-list').slideToggle(300);
+    });
+    $('.m-menu__catalog').on('click', function(e) {
+        e.stopPropagation();
+        $(this).toggleClass('active').find('.m-menu__catalog-list').slideToggle(300);
+    });
+    /* m-menu new end */
 });

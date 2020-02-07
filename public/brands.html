@@ -22,6 +22,39 @@
         </div>
       </section>
       <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-row flex aic">
+              <div class="header__geo">
+                <div class="header__geo-current flex aic"><i class="i-geo-dark"></i><span>Владивосток</span><i class="i-arrow-white"></i></div>
+                <ul class="header__geo-list">
+                  <li><a href="">Санкт-Петербург</a></li>
+                  <li><a href="">Москва</a></li>
+                  <li><a href="">Екатеринбург </a></li>
+                </ul>
+              </div>
+              <ul class="header__menu flex aic">
+                <li><a href="">О компании</a></li>
+                <li><a href="">Бренды</a></li>
+                <li><a href="">Где купить</a></li>
+                <li><a href="">Новости и акции</a></li>
+                <li><a href="">Филиалы</a></li>
+              </ul>
+              <div class="header__top-right flex aic">
+                <div class="header__contacts flex aic"><a href="tel:88002222244">8 (800) 222-22-44</a><span>08:00 - 22:00</span></div>
+                <div class="header__lang js-open-lang">
+                  <div class="header__lang-current flex aic"><i class="i-rus"></i><span>RUS</span><i class="i-arrow-white"></i></div>
+                  <ul class="header__lang-list"> 
+                    <li class="header__lang-item"><a class="flex aic" href=""><i class="i-en"></i><span>EN</span></a></li>
+                  </ul>
+                </div>
+                <div class="header__auth flex aic"><i class="i-user"></i>
+                  <div class="header__auth-links flex aic"><a class="js-auth" href="">Вход</a><a class="js-auth" href="">Регистрация</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="container">
           <div class="header__row flex-wrap aic">
             <div class="header__col header__col--logo flex aic">
@@ -29,23 +62,26 @@
                 <div class="header__burger-btn"><span></span><span></span><span></span></div>
               </div><a class="header__logo" href="/"><img src="img/logo.png" alt=""/></a>
             </div>
-            <div class="header__col header__col--menu">
-              <ul class="menu flex aic">
-                                <li class="active menu__item"><a class="menu__link" href="">О компании</a></li>
-                                <li class=" menu__item"><a class="menu__link" href="">Продукция</a></li>
-                                <li class=" menu__item"><a class="menu__link" href="">Бренды</a></li>
-                                <li class=" menu__item"><a class="menu__link" href="">Где купить</a></li>
-                                <li class=" menu__item"><a class="menu__link" href="">Новости и акции</a></li>
-              </ul>
-            </div>
-            <div class="header__col header__col--right flex aic"><a class="header__phone header__col--right-item" href="tel:8 (800) 222-22-44">8 (800) 222-22-44</a>
-              <div class="header__search header__col--right-item js-open-search"><i class="i-Search"></i></div><a class="header__auth header__col--right-item js-auth" href=""><i class="i-user"></i></a><a class="header__cart header__col--right-item" href=""><i class="i-cart"></i></a>
-              <div class="header__lang header__col--right-item js-open-lang">
-                <div class="header__lang-current flex aic"><span>RUS</span><i class="i-arrow--down-small"></i></div>
-                <ul class="header__lang-list">
-                  <li class="header__lang-item"><a href="">EN</a></li>
+            <div class="header__right flex aic">
+              <div class="header__catalog">
+                <div class="header__catalog-toggle flex aic"><i class="i-catalog"></i><span>Каталог товаров</span></div>
+                <ul class="header__catalog-list">
+                  <li><a class="flex aic" href=""><i class="i-catalog-acc"></i><span>Аккумуляторы</span></a></li>
+                  <li><a class="flex aic" href=""><i class="i-catalog-oil"></i><span>Масла</span></a></li>
+                  <li><a class="flex aic" href=""><i class="i-catalog-filter"></i><span>Фильтры</span></a></li>
                 </ul>
               </div>
+              <div class="header__search">
+                <form action="">
+                  <div class="header__search-field">
+                    <input type="text" placeholder="Поиск продукции"/>
+                    <button class="i-search" type="submit"></button>
+                  </div>
+                </form>
+              </div><a class="header__cart" href=""><i class="i-cart"></i></a>
+            </div>
+            <div class="header__right-m flex aic">
+              <button class="i-search js-open-search"></button><a class="i-user js-auth" href=""></a><a class="i-cart" href=""></a>
             </div>
             <div class="search">
               <div class="search__logo"><a href=""><img src="img/logo.png" alt=""/></a></div>
@@ -60,37 +96,47 @@
                 </div>
               </form>
             </div>
-          </div><a class="social-link-fix" href="#"><i class="i-telegram-fix"></i></a>
+          </div><a class="social-link-fix" href="#"><i class="i-chat"></i></a>
         </div>
       </header>
       <div class="m-menu">
-        <div class="m-menu__lang flex aic"><a class="active" href="">RUS</a><a href="">ENG</a></div><a class="m-menu__phone" href="tel:8 (800) 222-22-44">8 (800) 222-22-44</a>
-        <ul class="m-menu__list">
-          <li class="m-menu__item m-menu__item--bordered"><a class="m-menu__title flex aic" href="">О компании</a></li>
-          <li class="m-menu__item m-menu__item--bordered"><a class="m-menu__title flex aic" href=""> <span>Продукция</span><i class="i-menu-arrow"></i></a>
-            <ul class="m-menu__sublist">
-              <li class="m-menu__sublist-item"><a href="">Fujito Corporation</a></li>
-              <li class="m-menu__sublist-item"><a href="">Panasonic</a></li>
-              <li class="m-menu__sublist-item"><a href="">KYB</a></li>
-            </ul>
-          </li>
-          <li class="m-menu__item m-menu__item--bordered"><a class="m-menu__title flex aic" href=""><span>Бренды</span><i class="i-menu-arrow"></i></a>
-            <ul class="m-menu__sublist">
-              <li class="m-menu__sublist-item"><a href="">Fujito Corporation</a></li>
-              <li class="m-menu__sublist-item"><a href="">Panasonic</a></li>
-              <li class="m-menu__sublist-item"><a href="">KYB</a></li>
-            </ul>
-          </li>
-          <li class="m-menu__item"><a class="m-menu__title flex aic" href=""> <span>Где купить</span></a></li>
-          <li class="m-menu__item"><a class="m-menu__title flex aic" href=""> <span>Новости и акции</span></a></li>
-          <li class="m-menu__item"><a class="m-menu__title flex aic" href=""> <span>Контакты</span></a></li>
+        <div class="m-menu__geo">
+          <div class="m-menu__geo-current flex aic"><i class="i-geo-menu"></i><span>Владивосток</span><i class="i-menu-arrow"></i></div>
+          <ul class="m-menu__geo-list">
+            <li><a href="">Санкт-Петербург</a></li>
+            <li><a href="">Москва</a></li>
+            <li><a href="">Екатеринбург</a></li>
+          </ul>
+        </div>
+        <div class="m-menu__contacts flex aic jcsb"><a href="tel:8 (800) 222-22-44">8 (800) 222-22-44</a><span>08:00 - 22:00</span></div>
+        <div class="m-menu__catalog">
+          <div class="m-menu__catalog-toggle flex aic jcsb">
+            <div class="flex aic"><i class="i-catalog"></i><span>Продукция</span></div><i class="i-menu-arrow"></i>
+          </div>
+          <ul class="m-menu__catalog-list">
+            <li><a class="flex aic" href=""><i class="i-catalog-acc"></i><span>Аккумуляторы</span></a></li>
+            <li><a class="flex aic" href=""><i class="i-catalog-oil"></i><span>Масла</span></a></li>
+            <li><a class="flex aic" href=""><i class="i-catalog-filter"></i><span>Фильтры</span></a></li>
+          </ul>
+        </div>
+        <ul class="m-menu__links">
+          <li><a href="">О компании</a></li>
+          <li><a href="">Бренды</a></li>
+          <li><a href="">Где купить</a></li>
+          <li><a href="">Новости и акции</a></li>
+          <li><a href="">Филиалы</a></li>
         </ul>
-        <ul class="social m-menu__social flex aic">
-          <li class="social__item"><a href=""><i class="i-telegram"></i></a></li>
-          <li class="social__item"><a href=""><i class="i-viber"></i></a></li>
-          <li class="social__item"><a href=""><i class="i-whatsupp"></i></a></li>
+        <ul class="m-menu__lang flex aic">
+          <li><a class="flex aic active" href=""><i class="i-rus"></i><span>RU</span></a></li>
+          <li><a class="flex aic" href=""><i class="i-en"></i><span>EN</span></a></li>
         </ul>
-        <div class="m-menu__copy">© 2019, Макнот™</div>
+        <div class="m-menu__social flex aic jcsb">
+          <ul class="social flex aic">
+            <li class="social__item"><a href=""><i class="i-telegram"></i></a></li>
+            <li class="social__item"><a href=""><i class="i-viber"></i></a></li>
+            <li class="social__item"><a href=""><i class="i-whatsupp"></i></a></li>
+          </ul><span>© 2019, Макнот™</span>
+        </div>
       </div>
       <div class="detail">
         <div class="detail__top">
@@ -145,7 +191,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__row flex-wrap">
-          <div class="footer__col footer__col--logo"><a href=""><img src="img/footer__logo.png" alt=""/></a></div>
+          <div class="footer__col footer__col--logo"><a href=""><img src="img/logo-footer.png" alt=""/></a><span>© 2019, Макнот™</span></div>
           <div class="footer__col">
             <div class="footer__col-title">Адрес:</div>
             <div class="footer__col-content">
@@ -168,9 +214,7 @@
               <li class="social__item"><a href=""><i class="i-whatsupp"></i></a></li>
             </div>
           </div>
-          <div class="footer__col footer__col--info"><a href="">Политика конфиденциальности</a>
-            <p>Генеральный дистрибьютор «FUJITO CORPORATION»</p><span>© 2019, Макнот™</span>
-          </div>
+          <div class="footer__col footer__col--info"> <a class="btn btn--blue btn--blue-light" href=""><span>Обратная связь</span><i class="i-mail"></i></a><a href="">Политика конфиденциальности</a></div>
         </div>
       </div>
     </footer>

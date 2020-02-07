@@ -9,7 +9,7 @@
     font-size: 14px;
     font-weight: 700;
     padding: 8px 16px !important;
-    border-radius: 20px;
+    border-radius: 6px;
     transition: .3s;
     background: transparent;
     height: 40px;
@@ -24,6 +24,10 @@
         &:hover{
             background-color: #1e6dad !important;
         }   
+        &-light{
+            background: #00ACFF !important;      
+            color: white !important;
+        }
     }
     &--icon{
         padding: 8px 8px 8px 16px;

@@ -1,4 +1,49 @@
 header.header
+    .header__top
+        .container
+            .header__top-row.flex.aic
+                .header__geo
+                    .header__geo-current.flex.aic
+                        i.i-geo-dark
+                        span Владивосток
+                        i.i-arrow-white
+                    ul.header__geo-list
+                        li
+                            a(href="") Санкт-Петербург
+                        li
+                            a(href="") Москва
+                        li
+                            a(href="") Екатеринбург 
+                ul.header__menu.flex.aic
+                    li
+                        a(href="") О компании
+                    li
+                        a(href="") Бренды
+                    li
+                        a(href="") Где купить
+                    li
+                        a(href="") Новости и акции
+                    li
+                        a(href="") Филиалы
+                .header__top-right.flex.aic
+                    .header__contacts.flex.aic
+                        a(href="tel:88002222244") 8 (800) 222-22-44
+                        span 08:00 - 22:00
+                    .header__lang.js-open-lang
+                        .header__lang-current.flex.aic
+                            i.i-rus
+                            span RUS
+                            i.i-arrow-white
+                        ul.header__lang-list 
+                            li.header__lang-item
+                                a(href="").flex.aic
+                                    i.i-en
+                                    span EN
+                    .header__auth.flex.aic
+                        i.i-user
+                        .header__auth-links.flex.aic
+                            a(href="").js-auth Вход
+                            a(href="").js-auth Регистрация
     .container
         .header__row.flex-wrap.aic
             .header__col.header__col--logo.flex.aic
@@ -8,30 +53,36 @@ header.header
                         span
                         span
                 a(href="/").header__logo
-                    img(src="img/logo.png", alt="")
-            .header__col.header__col--menu
-                ul.menu.flex.aic
-                    include ../blocks/menu.pug
-                    +menu__item('О компании','active')
-                    +menu__item('Продукция')
-                    +menu__item('Бренды')
-                    +menu__item('Где купить')
-                    +menu__item('Новости и акции')
-            .header__col.header__col--right.flex.aic
-                a(href="tel:8 (800) 222-22-44").header__phone.header__col--right-item 8 (800) 222-22-44
-                .header__search.header__col--right-item.js-open-search
-                    i.i-Search
-                a(href="").header__auth.header__col--right-item.js-auth
-                    i.i-user
-                a(href="").header__cart.header__col--right-item
-                        i.i-cart
-                .header__lang.header__col--right-item.js-open-lang
-                    .header__lang-current.flex.aic
-                        span RUS
-                        i.i-arrow--down-small
-                    ul.header__lang-list
-                        li.header__lang-item
-                            a(href="") EN
+                    img(src="img/logo.png", alt="") 
+            .header__right.flex.aic
+                .header__catalog
+                    .header__catalog-toggle.flex.aic
+                        i.i-catalog
+                        span Каталог товаров
+                    ul.header__catalog-list
+                        li
+                            a(href="").flex.aic
+                                i.i-catalog-acc
+                                span Аккумуляторы
+                        li
+                            a(href="").flex.aic
+                                i.i-catalog-oil
+                                span Масла
+                        li
+                            a(href="").flex.aic
+                                i.i-catalog-filter
+                                span Фильтры
+                .header__search
+                    form(action="")
+                        .header__search-field
+                            input(type="text" placeholder="Поиск продукции")
+                            button(type="submit").i-search
+                a(href="").header__cart
+                    i.i-cart
+            .header__right-m.flex.aic
+                button.i-search.js-open-search
+                a(href="").i-user.js-auth
+                a(href="").i-cart
             .search
                 .search__logo
                     a(href="")
@@ -46,5 +97,5 @@ header.header
                         .search__close
                             i.i-close
         a(href="#").social-link-fix
-            i.i-telegram-fix
+            i.i-chat
 include ../blocks/m-menu

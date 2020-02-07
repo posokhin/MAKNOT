@@ -4,33 +4,73 @@
             max-width: 240px;
             width: 100%;
             height: 80px;
-            border-radius: 40px;
-            background-color: #3486c7; 
-            padding: 16px 10px;    
-            color: #ffffff;
+            padding: 16px 40px 16px 16px;    
+            color: #284066;
             font-family: $play;
             font-weight: 700;
             transition: .3s;
             margin-bottom: 40px;
+            background: #FFFFFF;
+            box-shadow: 0px 10px 20px rgba(39, 63, 100, 0.15);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            span{
+                position: relative;
+                z-index: 1;
+            }
+            &::before{
+                content: "";
+                display: block;
+                width: 60px;
+                height: 110px;
+                position: absolute;
+                left: -20px;
+                transform: rotate(22deg);
+                transition: .3s;
+            }
+            &:first-child{
+                &::before{
+                    background: #0096FF;
+                }
+            }
+            &:nth-child(2) {
+                &::before{
+                    background: #009051;       
+                }
+            }
             &:last-child{
                 margin-bottom: 0;
+                &::before{
+                    background: #FF9300;
+                }
             }
             &:hover{
-                box-shadow: 0 10px 20px rgba(0, 129, 240, 0.29);
+                color: white;
+                &::before{
+                    transform: none;
+                    width: 100%;
+                    left: 0;
+                }
             }
             @include media(1150){
                 display: none;
             }
         }
         &-icon{
-            min-width: 59px;
+            /* min-width: 59px;
             height: 59px;
             background-color: #ffffff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;     
-            margin-right: 16px; 
+            margin-right: 16px; */ 
+            min-width: 48px;
+            height: 48px;
+            margin-right: 16px;
+            position: relative;
+            z-index: 1;
         }
     }
 }

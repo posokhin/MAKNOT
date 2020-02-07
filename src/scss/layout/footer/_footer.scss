@@ -32,19 +32,9 @@
             color: #adb5bd;
             font-size: 14px;
             font-weight: 700;
-            letter-spacing: 0.58px;      
-            padding-bottom: 16px;
+            letter-spacing: 0.58px;
             margin-bottom: 8px;
             position: relative;
-            &::after{
-                content: "";
-                display: block;
-                position: absolute;
-                bottom: 0;
-                width: 16px;
-                height: 2px;
-                background-color: #00acff;
-            }
         }
         p,a{
             display: block;
@@ -59,6 +49,12 @@
             }
         }
         &--logo{
+            span{
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 24px;
+                color: #868E96;  
+            }
             @include media(1023){
                 width: 100%;
                 margin-bottom: 24px;
@@ -93,9 +89,6 @@
                 p{
                     margin: 24px 0;
                 }
-                span{
-                    order: 1;
-                }
             }
             p,a{
                 color: #adb5bd;
@@ -104,13 +97,27 @@
                 line-height: 20px;
             }
             a{
-                text-decoration: underline;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 18px;
+                max-width: 200px;
+                width: 100%;
+                &:last-child{
+                    text-decoration: underline;
+                    margin-top: 12px;
+                    font-weight: normal;
+                    font-size: 12px;
+                }
+                &:hover{
+                    text-decoration: none !important;
+                } 
             }
             p{
                 margin: 5px 0 13px;
-            }
-            span{
-                color: #868e96;       
             }
         }
     }

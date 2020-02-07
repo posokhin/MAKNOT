@@ -4,12 +4,15 @@
 }
 html,body{
     height: 100%;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 body{
     display: flex;
     flex-direction: column;
     font-family: $baseFont;
+    *{
+        font-family: "PT Sans" !important;
+    }
     background: #f8f9fa;
     color: #212529;
     &.bg-white{
@@ -39,7 +42,8 @@ button{
     cursor: pointer;
 }
 .wrapper{
-	flex: 1;
+    flex: 1;
+    position: relative;
 }
 .container{
     max-width: 1440px;
@@ -133,7 +137,7 @@ svg{
 }
 .social-link-fix{
     position: fixed;    
-    right: 10%;
+    right: 2%;
     top: 46%;
     z-index: 9;
     @include media(768){

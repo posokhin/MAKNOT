@@ -4,18 +4,21 @@ section.block-main
             .block-main__links.block-main__col.block-main__col--links
                 a(href="").block-main__links-item.flex.aic
                     .block-main__links-icon.flex.aic
-                        .i-acc
+                        //- .i-acc
+                        img(src="img/acc.png", alt="")
                     span Аккумуляторы
                 a(href="").block-main__links-item.flex.aic
                     .block-main__links-icon.flex.aic
-                        .i-oil
+                        //- .i-oil
+                        img(src="img/oil.png", alt="")
                     span Масла
                 a(href="").block-main__links-item.flex.aic
                     .block-main__links-icon.flex.aic
-                        .i-filter-water
+                        //- .i-filter-water
+                        img(src="img/filter.png", alt="")
                     span Фильтры
             .block-main__slider.block-main__col.block-main__col--slider.flex-wrap.aic
-                .block-main__slider-info
+                //- .block-main__slider-info
                     .swiper-container.js-slider-main-info
                         .swiper-wrapper
                             .block-main__slider-info-top.swiper-slide
@@ -67,12 +70,33 @@ section.block-main
                             i.i-arrow
                 .block-main__slider-content.swiper-container.js-slider-main
                     li.background
+                    .swiper-pagination
                     ul.block-main__slider-list.swiper-wrapper
                         li.block-main__slider-item.swiper-slide(data-color="#3486c7")
-                            img(src="img/slider-item.png", alt="")
+                            img(
+                                src="img/main-s.png"
+                                srcset="img/main-s.png, img/news-main/1.webp 600w", 
+                                alt="", 
+                                sizes="(max-width: 600px) 320px"
+                            )
                         li.block-main__slider-item.swiper-slide(data-color="green")
-                            img(src="img/slider-item.png", alt="")
+                            img(
+                                src="img/main-s.png"
+                                srcset="img/main-s.png, img/news-main/1.webp 600w", 
+                                alt="", 
+                                sizes="(max-width: 600px) 320px"
+                            )
                         li.block-main__slider-item.swiper-slide(data-color="black")
-                            img(src="img/slider-item.png", alt="")
+                            img(
+                                src="img/main-s.png"
+                                srcset="img/main-s.png, img/news-main/1.webp 600w", 
+                                alt="", 
+                                sizes="(max-width: 600px) 320px"
+                            )
                         li.block-main__slider-item.swiper-slide(data-color="red")
-                            img(src="img/slider-item.png", alt="")
+                            img(
+                                src="img/main-s.png"
+                                srcset="img/main-s.png, img/news-main/1.webp 600w", 
+                                alt="", 
+                                sizes="(max-width: 600px) 320px"
+                            )

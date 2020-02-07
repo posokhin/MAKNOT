@@ -12,6 +12,11 @@ i{
 .i{
     transition: .3s;
     &-arrow{
+        &-white{
+            @include icon('arrow-white');
+            width: 16px;
+            height: 16px;
+        }
         &--down{
             &-small{
                 width: 8px;
@@ -68,6 +73,9 @@ i{
         }
     }
     &-search{
+        @include icon('Search');
+        width: 32px;
+        height: 32px;
         &--custom{
             width: 18px;
             height: 18px;
@@ -129,6 +137,9 @@ i{
         height: 24px;
         &--orange{
             background: url("img/icons/i-more--orange.svg") no-repeat center/contain;
+            &-square{
+                @include icon('i-more--orange-square');
+            }
         }
         &-blue{
             &-dark{
@@ -255,9 +266,68 @@ i{
             @include icon('plus-blue');
         }
     }
-    &-telegram-fix{
-        @include icon('telegram');
+    &-chat{
+        @include icon('chat');
         width: 41px;
         height: 41px;
+    }
+    &-geo{
+        &-dark{
+            @include icon('geo-dark');
+            width: 16px;
+            height: 16px;            
+        }
+        &-menu{
+            @include icon('i-geo-menu');
+            width: 24px;
+            height: 24px;
+        }   
+    }
+    &-rus{
+        @include icon('rus');
+        width: 24px;
+        height: 16px;
+    }
+    &-en{
+        @include icon('en');
+        width: 24px;
+        height: 16px;
+    }
+    &-catalog{
+        @include icon('catalog');
+        width: 24px;
+        height: 24px;  
+        &.active{
+            @include icon('catalog-active');
+        }
+        &-acc{
+            @include icon('catalog-acc');
+            width: 24px;
+            height: 24px;  
+            &.active{ 
+                @include icon('catalog-acc-active');
+            }  
+        }
+        &-oil{
+            @include icon('catalog-oil');
+            width: 24px;
+            height: 24px;   
+            &.active{ 
+                @include icon('catalog-oil-active');
+            }   
+        }
+        &-filter{
+            @include icon('catalog-filter');
+            width: 24px;
+            height: 24px; 
+            &.active{ 
+                @include icon('catalog-filter-active');
+            }   
+        }
+    }
+    &-mail{
+        @include icon('mail');
+        width: 24px;
+        height: 24px;
     }
 }

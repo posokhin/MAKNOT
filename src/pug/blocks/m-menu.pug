@@ -1,50 +1,67 @@
 .m-menu
-    .m-menu__lang.flex.aic
-        a(href="").active RUS
-        a(href="") ENG
-    a(href="tel:8 (800) 222-22-44").m-menu__phone 8 (800) 222-22-44
-    ul.m-menu__list
-        li.m-menu__item.m-menu__item--bordered
-            a(href="").m-menu__title.flex.aic О компании
-        li.m-menu__item.m-menu__item--bordered
-            a(href="").m-menu__title.flex.aic 
+    .m-menu__geo
+        .m-menu__geo-current.flex.aic
+            i.i-geo-menu
+            span Владивосток
+            i.i-menu-arrow
+        ul.m-menu__geo-list
+            li
+                a(href="") Санкт-Петербург
+            li
+                a(href="") Москва
+            li
+                a(href="") Екатеринбург
+    .m-menu__contacts.flex.aic.jcsb
+        a(href="tel:8 (800) 222-22-44") 8 (800) 222-22-44
+        span 08:00 - 22:00
+    .m-menu__catalog
+        .m-menu__catalog-toggle.flex.aic.jcsb
+            div.flex.aic
+                i.i-catalog
                 span Продукция
-                i.i-menu-arrow
-            ul.m-menu__sublist
-                li.m-menu__sublist-item
-                    a(href="") Fujito Corporation
-                li.m-menu__sublist-item
-                    a(href="") Panasonic
-                li.m-menu__sublist-item
-                    a(href="") KYB
-        li.m-menu__item.m-menu__item--bordered
-            a(href="").m-menu__title.flex.aic
-                span Бренды
-                i.i-menu-arrow
-            ul.m-menu__sublist
-                li.m-menu__sublist-item
-                    a(href="") Fujito Corporation
-                li.m-menu__sublist-item
-                    a(href="") Panasonic
-                li.m-menu__sublist-item
-                    a(href="") KYB
-        li.m-menu__item
-            a(href="").m-menu__title.flex.aic 
-                span Где купить
-        li.m-menu__item
-            a(href="").m-menu__title.flex.aic 
-                span Новости и акции
-        li.m-menu__item
-            a(href="").m-menu__title.flex.aic 
-                span Контакты
-    ul.social.m-menu__social.flex.aic
-        li.social__item
-            a(href="")
-                i.i-telegram
-        li.social__item
-            a(href="")
-                i.i-viber
-        li.social__item
-            a(href="")
-                i.i-whatsupp
-    .m-menu__copy © 2019, Макнот™
+            i.i-menu-arrow
+        ul.m-menu__catalog-list
+            li
+                a(href="").flex.aic
+                    i.i-catalog-acc
+                    span Аккумуляторы
+            li
+                a(href="").flex.aic
+                    i.i-catalog-oil
+                    span Масла
+            li
+                a(href="").flex.aic
+                    i.i-catalog-filter
+                    span Фильтры
+    ul.m-menu__links
+        li
+            a(href="") О компании
+        li
+            a(href="") Бренды
+        li
+            a(href="") Где купить
+        li
+            a(href="") Новости и акции
+        li
+            a(href="") Филиалы
+    ul.m-menu__lang.flex.aic
+        li
+            a(href="").flex.aic.active
+                i.i-rus
+                span RU
+        li
+            a(href="").flex.aic
+                i.i-en
+                span EN
+    .m-menu__social.flex.aic.jcsb
+        ul.social.flex.aic
+            li.social__item
+                a(href="")
+                    i.i-telegram
+            li.social__item
+                a(href="")
+                    i.i-viber
+            li.social__item
+                a(href="")
+                    i.i-whatsupp
+        span © 2019, Макнот™
