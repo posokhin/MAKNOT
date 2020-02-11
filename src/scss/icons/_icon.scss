@@ -272,8 +272,8 @@ i{
         height: 41px;
     }
     &-geo{
-        &-dark{
-            @include icon('geo-dark');
+        &-white{
+            @include icon('geo-white');
             width: 16px;
             height: 16px;            
         }

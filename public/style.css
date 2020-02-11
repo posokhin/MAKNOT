@@ -5779,8 +5779,8 @@ i {
   height: 41px;
 }
 
-.i-geo-dark {
-  background: url("img/icons/geo-dark.svg") no-repeat center/contain;
+.i-geo-white {
+  background: url("img/icons/geo-white.svg") no-repeat center/contain;
   width: 16px;
   height: 16px;
 }
@@ -8341,7 +8341,7 @@ svg {
 
 .header__menu li a {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 22px;
   color: #FFFFFF;
   -webkit-transition: .3s;
