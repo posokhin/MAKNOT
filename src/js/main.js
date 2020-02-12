@@ -632,7 +632,7 @@ $(document).ready(function () {
     });
     $('.header__geo').on('mouseleave', function() {
         $(this).removeClass('open');
-        $(this).find('.header__geo-list').slideUp(300);
+        $(this).find('.header__geo-list').stop(true, true).slideUp(300);
     });
 
     /* $(document).on('click', function() {
@@ -645,7 +645,7 @@ $(document).ready(function () {
         $(this).addClass('active').siblings('.header__lang-list').slideDown(300);
     });
     $('.header__lang').on('mouseleave', function(e) {
-        $(this).find('.header__lang-current').removeClass('active').siblings('.header__lang-list').slideUp(300);
+        $(this).find('.header__lang-current').removeClass('active').siblings('.header__lang-list').stop(true, true).slideUp(300);
     });
 
     $('.header__catalog-toggle').on('mousemove', function(e) {
@@ -655,7 +655,7 @@ $(document).ready(function () {
     });
     $('.header__catalog').on('mouseleave', function(e) {
         e.stopPropagation();
-        $(this).find('.header__catalog-toggle').removeClass('active').siblings('.header__catalog-list').slideUp(300);
+        $(this).find('.header__catalog-toggle').removeClass('active').siblings('.header__catalog-list').stop(true, true).slideUp(300);
         $(this).find('i').removeClass('active'); 
     });
 
@@ -673,11 +673,11 @@ $(document).ready(function () {
     /* m-menu new */
     $('.m-menu__geo').on('click', function(e) {
         e.stopPropagation();
-        $(this).toggleClass('active').find('.m-menu__geo-list').slideToggle(300);
+        $(this).toggleClass('active').find('.m-menu__geo-list').stop(true, true).slideToggle(300);
     });
     $('.m-menu__catalog').on('click', function(e) {
         e.stopPropagation();
-        $(this).toggleClass('active').find('.m-menu__catalog-list').slideToggle(300);
+        $(this).toggleClass('active').find('.m-menu__catalog-list').stop(true, true).slideToggle(300);
     });
     /* m-menu new end */
 });

@@ -8340,7 +8340,6 @@ svg {
 }
 
 .header__menu li a {
-  font-weight: bold;
   font-size: 14px;
   line-height: 22px;
   color: #FFFFFF;
@@ -8370,8 +8369,7 @@ svg {
 }
 
 .header__geo-current span {
-  font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   color: #FFFFFF;
   margin: 0 12px 0 8px;
@@ -8390,8 +8388,7 @@ svg {
 .header__geo-list li a {
   padding: 12px 12px 12px 40px;
   display: block;
-  font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   color: #FFFFFF;
   -webkit-transition: .3s;
@@ -8404,7 +8401,7 @@ svg {
 
 .header__contacts a {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   color: #FFFFFF;
   -webkit-transition: .3s;
@@ -8416,8 +8413,7 @@ svg {
 }
 
 .header__contacts span {
-  font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   color: #ADB5BD;
   margin-left: 16px;
@@ -8475,8 +8471,7 @@ svg {
 }
 
 .header__auth-links a {
-  font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   color: #FFFFFF;
   display: -webkit-inline-box;
@@ -8510,8 +8505,7 @@ svg {
 .header__lang-current {
   padding: 12px 16px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   color: #FFFFFF;
   -webkit-transition: .3s;
@@ -8541,8 +8535,7 @@ svg {
   padding: 12px 16px;
   -webkit-transition: .3s;
   transition: .3s;
-  font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   color: #FFFFFF;
 }
@@ -10688,6 +10681,22 @@ p {
   .filter__form {
     padding: 24px;
   }
+
+  .header__top {
+    display: none;
+  }
+
+  .header__right {
+    display: none;
+  }
+
+  .header__right-m {
+    display: block;
+  }
+
+  .header__burger {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -10761,24 +10770,6 @@ p {
 
   .personal-banner-y {
     width: 50%;
-  }
-}
-
-@media screen and (max-width: 1169px) {
-  .header__top {
-    display: none;
-  }
-
-  .header__right {
-    display: none;
-  }
-
-  .header__right-m {
-    display: block;
-  }
-
-  .header__burger {
-    display: block;
   }
 }
 
